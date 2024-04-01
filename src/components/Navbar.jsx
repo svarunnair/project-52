@@ -8,7 +8,7 @@ const OuterContainer = styled(Box)(({ theme }) => ({
     display:"flex",
     justifyContent:"right",
     background:"white",
-    gap:30,
+    gap:50,
     padding:15,
     position:'sticky' ,
     top:0,

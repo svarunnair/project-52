@@ -59,6 +59,10 @@ const SecondBox = styled(Box)(({ theme }) => ({
 const SecondDetail = styled(Typography)(({ theme }) => ({
 
 textAlign:"left",
+display:"flex",
+flexDirection:"column",
+
+
 
 
   [theme.breakpoints.down("xl")]: {},
@@ -154,7 +158,11 @@ const Wrapper = styled(Box)(({ theme }) => ({
 }))
 
 const Detail = styled(Box)(({ theme }) => ({
-   display:"grid",
+   display:"flex",
+   flexDirection:"column",
+   padding:20,
+ 
+
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
   [theme.breakpoints.down("md")]: {},
@@ -230,6 +238,7 @@ const Footer = styled(Box)(({ theme }) => ({
  
     textAlign:"left",
 
+
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
   [theme.breakpoints.down("md")]: {},
@@ -304,6 +313,8 @@ const FooterDisc = styled(Typography)(({ theme }) => ({
 
 const IconDisc = styled(Typography)(({ theme }) => ({
  color:"grey",
+ padding:30,
+
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
   [theme.breakpoints.down("md")]: {},
@@ -475,13 +486,13 @@ function Home() {
 <ImgSec as={"img"} src='http://www.nigussystems.com/images/customer-support-system.png'/>
 
 <Detail>
-<SecondDetail>
+<SecondDetail sx={{fontSize:"19px",color:"#3c3c3c"}}>
 
 Break down silos and enhance collaboration across your organization. Seamlessly connect disparate systems for a more cohesive and streamlined workflow.
 
 </SecondDetail>
 
-<SecondDetail>
+<SecondDetail  sx={{fontSize:"19px",color:"#3c3c3c",paddingTop:1}}>
     Stay ahead in a dynamic landscape with our forward-thinking system integrations. Embrace innovation as we align and future-proof your technology infrastructure for sustained success.
 </SecondDetail>
 
@@ -499,7 +510,7 @@ Break down silos and enhance collaboration across your organization. Seamlessly 
 <ThirdDiv>
 
 <BoxOne>
-<ThumbUpIcon sx={{color:"#1b3d9b",width:"230px",border:"2px solid green"}}/>
+<ThumbUpIcon sx={{color:"#1b3d9b",width:"230px"}}/>
 <Head sx={{fontSize:"22px",fontWeight:"600"}}>
  Proven Expertise and Reliability   
 </Head>
@@ -520,7 +531,7 @@ Break down silos and enhance collaboration across your organization. Seamlessly 
 <BoxFour>
 
 <FourBoxOne>
-    <HeadFour sx={{fontWeight:600,fontSize:18,padding:1}}>
+    <HeadFour sx={{fontWeight:500,fontSize:18,padding:1,color:"#404044"}}>
 Streamlined Excellence - Elevate IT Operations with Seamless Software Integrations
     </HeadFour>
 
@@ -531,7 +542,7 @@ Streamlined Excellence - Elevate IT Operations with Seamless Software Integratio
 
 <FourBoxTwo>
 
-     <HeadFour sx={{fontWeight:600,fontSize:18,padding:1}}>
+     <HeadFour sx={{fontWeight:500,fontSize:18,padding:1,color:"#404044"}}>
 Innovative Fusion - Revolutionize IT with Advanced Software Integrations
     </HeadFour>
 
@@ -548,19 +559,19 @@ Ignite innovation as our expert integrations connect and enhance your IT softwar
 
 <IconOne>
     <ImgIcon as={"img"} src='http://www.nigussystems.com/images/queue-statistics.png'/>
-    <IconHead>Analytics</IconHead>
+    <IconHead sx={{fontWeight:600,fontSize:22,paddingTop:1}}>Analytics</IconHead>
     <IconDisc>Elevate performance through cutting-edge IT system analytics, providing deep insights for strategic decision-making and business empowerment.</IconDisc>
 </IconOne>
 
 <IconTwo>
      <ImgIcon as={"img"} src='http://www.nigussystems.com/images/call-features.png'/>
-      <IconHead>Application Integrations</IconHead>
+      <IconHead sx={{fontWeight:600,fontSize:22,paddingTop:1}}>Application Integrations</IconHead>
        <IconDisc>Elevate performance through cutting-edge IT system analytics, providing deep insights for strategic decision-making and business empowerment.</IconDisc>
 </IconTwo>
 
 <IconThree>
      <ImgIcon as={"img"} src='http://www.nigussystems.com/images/configure.png'/>
-      <IconHead>Installation & Support</IconHead>
+      <IconHead sx={{fontWeight:600,fontSize:22,paddingTop:1}}>Installation & Support</IconHead>
        <IconDisc>Elevate performance through cutting-edge IT system analytics, providing deep insights for strategic decision-making and business empowerment.</IconDisc>
 </IconThree>
 
@@ -581,12 +592,15 @@ Ignite innovation as our expert integrations connect and enhance your IT softwar
 <IconImg as={"img"} src="http://www.nigussystems.com/images/nigus-logo.png"/>
 <IconHead>Nigus Systems Private Limited</IconHead>
 <FooterDisc sx={{fontSize:'12px'}}>We work across 24 x 7 to help you run your business without any hassle.
+<FooterDisc sx={{fontSize:'12px'}}>business without any hassle.
+</FooterDisc>
+
+<FooterDisc sx={{fontSize:'12px',paddingTop:10,}}>© 2024 Nigus Systems Pvt Ltd
+</FooterDisc>
 
 </FooterDisc>
 
 </Footer>
-
-
 
     </Container>
 

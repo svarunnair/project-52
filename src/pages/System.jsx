@@ -97,8 +97,18 @@ const SubDiv = styled(Box)(({ theme }) => ({
     flexDirection:"column",
     justifyContent:"center",
     alignItems:"center",
-    padding:35,
+    padding:25,
    
+
+  [theme.breakpoints.down("xl")]: {},
+  [theme.breakpoints.down("lg")]: {},
+  [theme.breakpoints.down("md")]: {},
+  [theme.breakpoints.down("sm")]: {},
+  [theme.breakpoints.down("xs")]: {},
+}))
+const IconImage = styled(Box)(({ theme }) => ({
+
+   width:"100%",
 
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
@@ -124,8 +134,9 @@ const DivOne = styled(Box)(({ theme }) => ({
     display:"flex",
     boxShadow: "rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px",
     padding:33,
+    borderRadius:10,
  
- borderRadius:10,
+
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
   [theme.breakpoints.down("md")]: {},
@@ -182,16 +193,18 @@ color:"grey",
   [theme.breakpoints.down("xs")]: {},
 }))
 
-function SoftDev() {
+function System() {
   return (
     <Wrap>
     <Container>
 <FirstDiv>
 
 <FirstText>
-    <Header sx={{fontWeight:"500",fontSize: 48}}>Software Excellence, Elevating Businesses to new heights</Header>
-    <Disc>Seamlessly connect software, systems, and applications for optimized performance, propelling businesses to unparalleled success.</Disc>
-<Disc sx={{paddingTop:2,}}>Experience the transformative power of unified operations, ensuring peak productivity and unlocking new possibilities with cutting-edge integration expertise.</Disc>
+    <Header sx={{fontWeight:"500",fontSize: 48}}>Breaking Boundaries</Header>
+    <Disc>Break free from limitations with integration expertise, unifying software, systems, and applications for a streamlined and cohesive business experience.</Disc>
+<Disc sx={{paddingTop:2,}}>Stay ahead of the curve with integration solutions, future-proofing businesses by connecting and supporting software, systems, and applications with cutting-edge expertise.</Disc>
+
+
 </FirstText>
 
 
@@ -200,17 +213,19 @@ function SoftDev() {
 </FirstDiv>
 
 
+<IconImage as={"img"} src='http://www.nigussystems.com/images/slider.gif'/>
+
 <SubDiv>
-    <TextBox sx={{fontWeight:500,fontSize:24,}}>Innovate. Build. Thrive</TextBox>
-    <TextBox sx={{width:"65%",fontSize:18,color:"#3c3c3c",padding:1,}}>Decade of experience in integration with comprehensive services, seamlessly connecting software, systems, and applications for superior business outcomes.</TextBox>
+    <TextBox sx={{fontWeight:500,fontSize:24,}}>Unifying Software, Systems & Applications</TextBox>
+    <TextBox sx={{width:"65%",fontSize:18,color:"#3c3c3c",}}>Decade of experience in integration with comprehensive services, seamlessly connecting software, systems, and applications for superior business outcomes.</TextBox>
 </SubDiv>
 
 <Div>
-    <DivOne><TextBox sx={{fontSize:"18"}}>Enterprise Software</TextBox></DivOne>
-    <DivOne><TextBox sx={{fontSize:"18"}}>Customized Software</TextBox></DivOne>
-    <DivOne><TextBox sx={{fontSize:"18"}}>Enterprise Applications</TextBox></DivOne>
-    <DivOne><TextBox sx={{fontSize:"18"}}>Solutions & Consulting</TextBox></DivOne>
-    <DivOne><TextBox sx={{fontSize:"18"}}>Support & Maintenance</TextBox></DivOne>
+    <DivOne><TextBox sx={{fontSize:"18"}}>Software Integrations</TextBox></DivOne>
+    <DivOne><TextBox sx={{fontSize:"18"}}>IT System Integrations</TextBox></DivOne>
+    <DivOne><TextBox sx={{fontSize:"18"}}>Enterprise Applications Integrations</TextBox></DivOne>
+    <DivOne><TextBox sx={{fontSize:"18"}}>IT Solutions & Consulting</TextBox></DivOne>
+    <DivOne><TextBox sx={{fontSize:"18"}}>IT Support & Maintenance</TextBox></DivOne>
 </Div>
 
 <SubTit sx={{fontSize:24,color:"#404044",paddingTop:7,paddingBottom:5}}>Effortless Collaboration, Elevate With System Integrations</SubTit>
@@ -241,4 +256,4 @@ function SoftDev() {
   )
 }
 
-export default SoftDev
+export default System
