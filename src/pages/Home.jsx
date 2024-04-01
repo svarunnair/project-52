@@ -1,14 +1,26 @@
 import { Box, Typography } from '@mui/material'
 import React from 'react'
 import styled from 'styled-components'
+import Header from '../components/Header'
+import ThumbUpIcon from '@mui/icons-material/ThumbUp';
 
 
 const Container = styled(Box)(({ theme }) => ({
-    border:"2px solid red",
+
     display:"flex",
     flexDirection:'column',
     gap:30,
+    padding:35,
 
+  [theme.breakpoints.down("xl")]: {},
+  [theme.breakpoints.down("lg")]: {},
+  [theme.breakpoints.down("md")]: {},
+  [theme.breakpoints.down("sm")]: {},
+  [theme.breakpoints.down("xs")]: {},
+}))
+
+const OuterWrapper = styled(Box)(({ theme }) => ({
+   
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
   [theme.breakpoints.down("md")]: {},
@@ -17,7 +29,7 @@ const Container = styled(Box)(({ theme }) => ({
 }))
 const FirstBox = styled(Box)(({ theme }) => ({
     display:"flex",
-    border:"2px solid blue",
+  
     justifyContent:"center",
     gap:30,
 
@@ -31,7 +43,7 @@ const FirstBox = styled(Box)(({ theme }) => ({
 
 const SecondBox = styled(Box)(({ theme }) => ({
 
-    border:"2px solid black",
+
     justifyContent:"center",
 
 
@@ -46,8 +58,7 @@ const SecondBox = styled(Box)(({ theme }) => ({
 
 const SecondDetail = styled(Typography)(({ theme }) => ({
 
-    border:"2px solid green",
-   
+textAlign:"left",
 
 
   [theme.breakpoints.down("xl")]: {},
@@ -59,7 +70,8 @@ const SecondDetail = styled(Typography)(({ theme }) => ({
 
 const Heading = styled(Box)(({ theme }) => ({
 
-    border:"2px solid black",
+  color: "#404044",
+
     justifyContent:"center",
 
 
@@ -73,6 +85,7 @@ const Heading = styled(Box)(({ theme }) => ({
 const Disc = styled(Typography)(({ theme }) => ({
     color:"grey",
 
+
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
   [theme.breakpoints.down("md")]: {},
@@ -83,9 +96,9 @@ const Disc = styled(Typography)(({ theme }) => ({
 
 const InnerOne = styled(Box)(({ theme }) => ({
     display:"grid",
-    border:"2px solid green",
+
     width:"50%",
-    gap:30,
+    gap:10,
     
 
   [theme.breakpoints.down("xl")]: {},
@@ -97,7 +110,9 @@ const InnerOne = styled(Box)(({ theme }) => ({
 
 const InnerImg = styled(Box)(({ theme }) => ({
     display:"flex",
-    border:"2px solid yellow",
+
+    width:"50%",
+    height:"80%",
 
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
@@ -108,8 +123,8 @@ const InnerImg = styled(Box)(({ theme }) => ({
 
 const TextInner = styled(Typography)(({ theme }) => ({
     fontSize:"50px",
-    color:'red',
     textAlign:"left",
+    width:"90%",
 
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
@@ -148,6 +163,7 @@ const Detail = styled(Box)(({ theme }) => ({
 }))
 
 const ImgSec = styled(Box)(({ theme }) => ({
+  width:"50%",
    
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
@@ -167,6 +183,10 @@ const SubDiv = styled(Box)(({ theme }) => ({
 
 const ThirdDiv = styled(Box)(({ theme }) => ({
    display:"flex",
+
+   justifyContent:"center",
+   padding:10,
+   gap:20,
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
   [theme.breakpoints.down("md")]: {},
@@ -176,7 +196,6 @@ const ThirdDiv = styled(Box)(({ theme }) => ({
 
 const BoxFour = styled(Box)(({ theme }) => ({
    display:"flex",
-   border:"2px solid green",
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
   [theme.breakpoints.down("md")]: {},
@@ -208,7 +227,7 @@ const BottomWrap = styled(Typography)(({ theme }) => ({
 }))
 
 const Footer = styled(Box)(({ theme }) => ({
-    border:"2px solid green",
+ 
     textAlign:"left",
 
   [theme.breakpoints.down("xl")]: {},
@@ -219,7 +238,7 @@ const Footer = styled(Box)(({ theme }) => ({
 }))
 
 const IconImg = styled(Box)(({ theme }) => ({
-    border:"2px solid green",
+
     width:"10%",
 
   [theme.breakpoints.down("xl")]: {},
@@ -241,7 +260,7 @@ const FooterHead = styled(Typography)(({ theme }) => ({
 
 const IconBox = styled(Box)(({ theme }) => ({
    display:"flex",
-   border:"2px solid green",
+
    justifyContent:"center",
    gap:50,
   [theme.breakpoints.down("xl")]: {},
@@ -256,7 +275,7 @@ const IconOne = styled(Box)(({ theme }) => ({
    flexDirection:"column",
    justifyContent:"center",
       alignItems:"center",
-   border:"2px solid green",
+
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
   [theme.breakpoints.down("md")]: {},
@@ -296,8 +315,7 @@ const ImgIcon = styled(Box)(({ theme }) => ({
    display:"flex",
    flexDirection:"column",
    width:"50%",
-   
-   border:"2px solid green",
+ 
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
   [theme.breakpoints.down("md")]: {},
@@ -310,7 +328,7 @@ const IconTwo = styled(Box)(({ theme }) => ({
    flexDirection:"column",
       alignItems:"center",
    justifyContent:"center",
-   border:"2px solid red",
+
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
   [theme.breakpoints.down("md")]: {},
@@ -323,7 +341,7 @@ const IconThree = styled(Box)(({ theme }) => ({
    flexDirection:"column",
    alignItems:"center",
    justifyContent:"center",
-   border:"2px solid green",
+
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
   [theme.breakpoints.down("md")]: {},
@@ -335,7 +353,7 @@ const IconThree = styled(Box)(({ theme }) => ({
 
 const FourBoxOne = styled(Box)(({ theme }) => ({
    
-   border:"2px solid green",
+
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
   [theme.breakpoints.down("md")]: {},
@@ -364,7 +382,7 @@ const DetailFour = styled(Typography)(({ theme }) => ({
 
 const FourBoxTwo = styled(Box)(({ theme }) => ({
 
-   border:"2px solid green",
+
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
   [theme.breakpoints.down("md")]: {},
@@ -373,8 +391,15 @@ const FourBoxTwo = styled(Box)(({ theme }) => ({
 }))
 
 const BoxOne = styled(Box)(({ theme }) => ({
-    border:"2px solid green",
-    width:"35%",
+    // border:"2px solid green",
+    display:'flex',
+    flexDirection:"column",
+    justifyContent:"center",
+    alignItems:"center",
+    width:"50%",
+boxShadow: 'rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px',
+    padding:25,
+    gap:20,
    
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
@@ -384,7 +409,7 @@ const BoxOne = styled(Box)(({ theme }) => ({
 }))
 
 const Head = styled(Box)(({ theme }) => ({
-    border:"2px solid black",
+
    
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
@@ -398,8 +423,10 @@ const BoxTwo = styled(Box)(({ theme }) => ({
     display:"flex",
     flexDirection:"column",
     gap:20,
-    border:"2px solid red",
-    justifyContent:'center',
+
+    // alignItems:'center',
+    justifyContent:"center",
+
    
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
@@ -409,7 +436,10 @@ const BoxTwo = styled(Box)(({ theme }) => ({
 }))
 const TextTwo = styled(Box)(({ theme }) => ({
    textAlign:"left",
-    color:"grey",
+    color:"#3c3c3c",
+
+    width:"100%",
+
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
   [theme.breakpoints.down("md")]: {},
@@ -420,10 +450,12 @@ const TextTwo = styled(Box)(({ theme }) => ({
 
 function Home() {
   return (
+<OuterWrapper>
+
     <Container>
         <FirstBox>
         <InnerOne>
-        <TextInner sx={{fontSize:38}}>Empowering Innovation through Customized Applications  </TextInner>
+        <TextInner sx={{fontSize:44,fontWeight:"600"}}>Empowering Innovation through Customized Applications  </TextInner>
         <TextDes>We specialize in crafting cutting-edge applications that redefine user experiences and drive business success.Our team of experienced developers utilizes the latest technologies to create scalable and robust applications tailored to meet your unique needs.</TextDes>
 <TextDes >From concept to deployment, we are dedicated to delivering top-notch solutions that elevate your digital presence and exceed your expectations.</TextDes>
         </InnerOne>
@@ -435,7 +467,7 @@ function Home() {
 
 <SecondBox>
 
-<Heading>Effortless Collaboration, Elevate With System Integrations
+<Heading sx={{fontSize:"24px",fontWeight:500,paddingTop:7,paddingBottom:3}}>Effortless Collaboration, Elevate With System Integrations
 </Heading>
 
 
@@ -467,19 +499,18 @@ Break down silos and enhance collaboration across your organization. Seamlessly 
 <ThirdDiv>
 
 <BoxOne>
-
-<Head sx={{fontSize:24,fontWeight:"600"}}>
+<ThumbUpIcon sx={{color:"#1b3d9b",width:"230px",border:"2px solid green"}}/>
+<Head sx={{fontSize:"22px",fontWeight:"600"}}>
  Proven Expertise and Reliability   
 </Head>
 <Disc>Customers choose us for our proven IT expertise, track record of successful projects, and a dedicated team, instilling confidence through reliable and high-quality services.</Disc>
-
 
 </BoxOne>
 
 <BoxTwo>
 
-<TextTwo>Discover the power of seamless connectivity. Our system integration solutions ensure superior performance by intelligently connecting and synchronizing your diverse technological components.</TextTwo>
-<TextTwo>Experience a revolution in business operations. Our system integrations bridge gaps, enabling a cohesive and responsive environment that unlocks the full potential of your technological ecosystem.</TextTwo>
+<TextTwo sx={{fontSize:"20px"}}>Discover the power of seamless connectivity. Our system integration solutions ensure superior performance by intelligently connecting and synchronizing your diverse technological components.</TextTwo>
+<TextTwo sx={{fontSize:"20px"}}>Experience a revolution in business operations. Our system integrations bridge gaps, enabling a cohesive and responsive environment that unlocks the full potential of your technological ecosystem.</TextTwo>
 
 
 </BoxTwo>
@@ -489,22 +520,22 @@ Break down silos and enhance collaboration across your organization. Seamlessly 
 <BoxFour>
 
 <FourBoxOne>
-    <HeadFour sx={{fontWeight:600,fontSize:18}}>
+    <HeadFour sx={{fontWeight:600,fontSize:18,padding:1}}>
 Streamlined Excellence - Elevate IT Operations with Seamless Software Integrations
     </HeadFour>
 
-    <DetailFour sx={{color:"grey"}}>
+    <DetailFour sx={{color:"grey",fontSize:18,padding:1}}>
         Experience unparalleled efficiency as we seamlessly integrate and optimize your IT software, unlocking a new level of streamlined excellence for your business operations.
     </DetailFour>
 </FourBoxOne>
 
 <FourBoxTwo>
 
-     <HeadFour sx={{fontWeight:600,fontSize:18}}>
+     <HeadFour sx={{fontWeight:600,fontSize:18,padding:1}}>
 Innovative Fusion - Revolutionize IT with Advanced Software Integrations
     </HeadFour>
 
-    <DetailFour sx={{color:"grey"}}>
+    <DetailFour sx={{color:"grey",fontSize:18,padding:1}}>
 Ignite innovation as our expert integrations connect and enhance your IT software, transforming the way your business operates and ensuring a future-ready IT infrastructure.
     </DetailFour>
 </FourBoxTwo>
@@ -539,7 +570,7 @@ Ignite innovation as our expert integrations connect and enhance your IT softwar
 </IconBox>
 
 <BottomWrap>
-<BottomText sx={{fontSize:"35px",fontWeight:'700'}}>
+<BottomText sx={{fontSize:"33px",fontWeight:'600'}}>
     Decade-plus of experience in India, the Middle East, and the Asia Pacific, delivering enterprise software and application solutions tailored to meet diverse business needs.
 </BottomText>
 </BottomWrap>
@@ -558,6 +589,8 @@ Ignite innovation as our expert integrations connect and enhance your IT softwar
 
 
     </Container>
+
+    </OuterWrapper>
   )
 }
 
