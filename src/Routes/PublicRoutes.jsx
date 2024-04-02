@@ -6,6 +6,7 @@ import SoftDev from '../pages/SoftDev'
 import AiDev from '../pages/AiDev'
 import System from '../pages/System'
 import About from '../pages/About'
+import Cover from '../components/Cover'
 
 function PublicRoutes() {
   return (
@@ -19,6 +20,7 @@ function PublicRoutes() {
 <Route path='/aidev' element={<AiDev/>}/>
 <Route path='/system' element={<System/>}/>
 <Route path='/about' element={<About/>}/>
+<Route path='/cover' element={<Cover/>}/>
 
 
 </Routes>

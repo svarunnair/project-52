@@ -6,6 +6,7 @@ import HandshakeIcon from '@mui/icons-material/Handshake';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import { Slide } from '@mui/material';
 import Scroll from '../components/Scroll';
+import { Rotate90DegreesCcw } from '@mui/icons-material';
 const Container = styled(Box)(({ theme }) => ({
     // border:"2px solid red",
     padding:15,
@@ -197,6 +198,17 @@ const TextBox = styled(Typography)(({ theme }) => ({
   [theme.breakpoints.down("sm")]: {},
   [theme.breakpoints.down("xs")]: {},
 }))
+const TextBoxX = styled(Typography)(({ theme }) => ({
+    background:"transparent",
+
+
+  [theme.breakpoints.down("xl")]: {},
+  [theme.breakpoints.down("lg")]: {},
+  [theme.breakpoints.down("md")]: {},
+  [theme.breakpoints.down("sm")]: {},
+  [theme.breakpoints.down("xs")]: {},
+}))
+
 
 const ClientDiv = styled(Box)(({ theme }) => ({
 // border:"2px solid blue",
@@ -317,14 +329,18 @@ padding:40,
 const IconDiv = styled(Box)(({ theme }) => ({
     display:"flex",
     flexDirection:"column",
+    cursor:"pointer",
+    padding:10,
+    
     // border:"2px solid green",
- boxShadow: "rgba(149, 157, 165, 0.2) 0px 8px 24px",
+ boxShadow: "rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px",
 
 
 
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
   [theme.breakpoints.down("md")]: {
+    padding:0,
     width:"100%",
   },
   [theme.breakpoints.down("sm")]: {},
@@ -334,6 +350,10 @@ const IconDiv = styled(Box)(({ theme }) => ({
 const ImgIcon = styled(Box)(({ theme }) => ({
 width:"70%",
 paddingTop:0,
+":hover":{
+  transitionDuration:".5s",
+   transform:  'rotate(45deg)' ,
+},
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
   [theme.breakpoints.down("md")]: {},
@@ -395,8 +415,16 @@ padding:35,
 }))
 const DivOneBox = styled(Box)(({ theme }) => ({
 
-   padding:20,
-  boxShadow:" rgba(149, 157, 165, 0.2) 0px 8px 24px",
+  cursor:"pointer",
+   padding:25,
+   ":hover":{
+    transitionDuration:".5s",
+    transform:  'rotate(360deg)' ,
+    padding:20,
+   },
+  boxShadow:" rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;",
+
+
 
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
@@ -541,7 +569,7 @@ console.log("count",count)
           <ImgCli as="img" sx={{ position: 'absolute',
     top: 0,
     left: '-100%',
-    transition: 'left 0.5s ease-in-out',}} src={image} alt={`Image ${index + 1}`} />
+    transition: 'left 0.2s ease-in-out',}} src={image} alt={`Image ${index + 1}`} />
         </Slide>
       ))}
  </ImgCliOuter>
@@ -560,57 +588,47 @@ Future-Ready Solutions: Transforming Your Business With Innovative Software
     <DivOne>
         <DivOneBox>
         <IconImgOne as={"img"} src='http://www.nigussystems.com/images/apps.png'/>
-        <TextBox sx={{fontWeight:600,}}>Web Development</TextBox>
+        <TextBoxX sx={{fontWeight:600,}}>Web Development</TextBoxX>
 
         </DivOneBox>
         <DivOneBox>
         <IconImgOne as={"img"} src='http://www.nigussystems.com/images/crm%20integration.png'/>
-        <TextBox sx={{fontWeight:600,}}>Web Development</TextBox>
+        <TextBoxX sx={{fontWeight:600,}}>Web Development</TextBoxX>
 
         </DivOneBox>
 
 
-        <DivOneBox>
+        <DivOneBox >
     <IconImgOne as={"img"} src='http://www.nigussystems.com/images/unified%20communications.png'/>
-    <TextBox sx={{fontWeight:600,}}>Software Development</TextBox>
+    <TextBoxX sx={{fontWeight:600,}}>Software Development</TextBoxX>
 
     </DivOneBox>
 
     <DivOneBox>
  <IconImgOne as={"img"} src='http://www.nigussystems.com/images/application-integration.png'/>
-  <TextBox sx={{fontWeight:600,}}> AI/ML Development</TextBox>
+  <TextBoxX sx={{fontWeight:600,}}> AI/ML Development</TextBoxX>
     </DivOneBox>
         
     </DivOne>
     
  <IconSecond>
+
+ <DivOneBox>
+ <IconImgOne as={"img"} src='http://www.nigussystems.com/images/call-center-solutions.png'/>
+  <TextBoxX sx={{fontWeight:600,}}> System Integration</TextBoxX>
+    </DivOneBox>
     
-    <IconDiv  onMouseEnter={handleEnter} onMouseLeave={handleExit}>
-    <HandshakeIcon sx={{position:"absolute",paddingTop:`${value}px`}}/>
-    <WrapIcon>
-<ImgIcon as={"img"} src='http://www.nigussystems.com/images/call-center-solutions.png'/>
-<TextBox sx={{fontWeight:600,}}>System Integration</TextBox>
-</WrapIcon>
-    </IconDiv>
+    
+<DivOneBox>
+ <IconImgOne as={"img"} src='http://www.nigussystems.com/images/crm%20integration.png'/>
+  <TextBoxX sx={{fontWeight:600,}}>CRM Integration</TextBoxX>
+    </DivOneBox>
 
-
-
-    <IconDiv onMouseEnter={handleEnterOne} onMouseLeave={handleExitOne}>
-    <HandshakeIcon sx={{position:"absolute",paddingTop:`${valueOne}px`,}}/>
-    <WrapIcon>
-<ImgIcon as={"img"} src='http://www.nigussystems.com/images/crm%20integration.png'/>
-<TextBox sx={{fontWeight:600,width:"100%"}}>CRM Integration</TextBox>
-</WrapIcon>
-    </IconDiv>
-
-
-    <IconDiv onMouseEnter={handleEnterTwo} onMouseLeave={handleExitTwo}>
-    <HandshakeIcon sx={{position:"absolute",paddingTop:`${valueTwo}px`}}/>
-    <WrapIcon>
-<ImgIcon as={"img"} src='http://www.nigussystems.com/images/web-conferencing.png'/>
-<TextBox sx={{fontWeight:600,width:"100%"}}>Application Integration</TextBox>
-</WrapIcon>
-    </IconDiv>
+  
+    <DivOneBox>
+ <IconImgOne as={"img"} src='http://www.nigussystems.com/images/web-conferencing.png'/>
+  <TextBoxX sx={{fontWeight:600,}}> Application Integration</TextBoxX>
+    </DivOneBox>
 
 
     </IconSecond>

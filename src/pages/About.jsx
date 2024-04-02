@@ -5,9 +5,9 @@ import styled from 'styled-components'
 
 const Container = styled(Box)(({ theme }) => ({
 display:"flex",
+// border:"2px solid red",
 flexDirection:"column",
-alignItems:"center",
-justifyContent:"center",
+alignItems:"end",
 padding:30,
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
@@ -92,9 +92,9 @@ const BoxDisc = styled(Box)(({ theme }) => ({
 }))
 function About() {
   return (
+    <>
+     <TitleDiv sx={{fontWeight:700,fontSize:36,color:"#404044"}}>Decade of Experience</TitleDiv>
     <Container>
-
-    <TitleDiv sx={{fontWeight:700,fontSize:36,color:"#404044"}}>Decade of Experience</TitleDiv>
 
     <BoxDiv>
 
@@ -144,6 +144,8 @@ function About() {
         <BottomDiv></BottomDiv>
 
     </Container>
+
+    </>
   )
 }
 

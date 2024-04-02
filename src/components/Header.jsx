@@ -214,7 +214,7 @@ function Header() {
         <TextOne sx={{fontWeight:600}}>Services</TextOne>
          <TextOne sx={{fontWeight:600}}>Solutions</TextOne>
           <TextOne sx={{fontWeight:600}}>Industries</TextOne>
-           <TextOne sx={{fontWeight:600}}>About Us</TextOne>
+           <TextOne onClick={handleAbout} sx={{fontWeight:600}}>About Us</TextOne>
             <TextOne sx={{fontWeight:600}}>Contact Us</TextOne>
             <Email onClick={handleEmail}>sales@nigussystems.com</Email>
               <Email>+91 98806 98312</Email>

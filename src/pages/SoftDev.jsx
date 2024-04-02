@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import MidDiv from '../components/MidDiv'
 import FooterIcons from '../components/FooterIcons'
 import Footer from '../components/Footer'
+import Scroll from '../components/Scroll'
 
 const Container = styled(Box)(({ theme }) => ({
 
@@ -13,6 +14,22 @@ const Container = styled(Box)(({ theme }) => ({
     alignItems:"center",
 padding:"30px",
 
+  [theme.breakpoints.down("xl")]: {},
+  [theme.breakpoints.down("lg")]: {},
+  [theme.breakpoints.down("md")]: {},
+  [theme.breakpoints.down("sm")]: {},
+  [theme.breakpoints.down("xs")]: {},
+}))
+const ArrowDiv = styled(Box)(({ theme }) => ({
+  
+  display:"flex",
+  justifyContent:"end",
+  width:"100%",
+// border:"2px solid red",
+  position:"sticky",
+  top:100,
+  
+   
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
   [theme.breakpoints.down("md")]: {},
@@ -236,8 +253,9 @@ function SoftDev() {
 </Div>
 
 <SubTit sx={{fontSize:24,color:"#404044",paddingTop:7,paddingBottom:5}}>Effortless Collaboration, Elevate With System Integrations</SubTit>
-
-
+<ArrowDiv>
+<Scroll/>
+</ArrowDiv>
 <SecondDiv>
 <ImgSec as={"img"} src='http://www.nigussystems.com/images/customer-support-system.png'/>
 
