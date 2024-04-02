@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import MidDiv from '../components/MidDiv'
 import FooterIcons from '../components/FooterIcons'
 import Footer from '../components/Footer'
+import Scroll from '../components/Scroll'
 
 const Container = styled(Box)(({ theme }) => ({
 
@@ -57,7 +58,9 @@ const SecondDiv = styled(Box)(({ theme }) => ({
 
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
-  [theme.breakpoints.down("md")]: {},
+  [theme.breakpoints.down("md")]: {
+    flexDirection:"column",
+  },
   [theme.breakpoints.down("sm")]: {},
   [theme.breakpoints.down("xs")]: {},
 }))
@@ -76,7 +79,9 @@ const ImgSec = styled(Box)(({ theme }) => ({
 
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
-  [theme.breakpoints.down("md")]: {},
+  [theme.breakpoints.down("md")]: {
+     width:"100%",
+  },
   [theme.breakpoints.down("sm")]: {},
   [theme.breakpoints.down("xs")]: {},
 }))
@@ -88,7 +93,10 @@ const TextSec = styled(Typography)(({ theme }) => ({
 
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
-  [theme.breakpoints.down("md")]: {},
+  [theme.breakpoints.down("md")]: {
+       width:"100%",
+        padding:0,
+  },
   [theme.breakpoints.down("sm")]: {},
   [theme.breakpoints.down("xs")]: {},
 }))
@@ -101,6 +109,20 @@ const SubDiv = styled(Box)(({ theme }) => ({
     alignItems:"center",
     padding:25,
    
+
+  [theme.breakpoints.down("xl")]: {},
+  [theme.breakpoints.down("lg")]: {},
+  [theme.breakpoints.down("md")]: {},
+  [theme.breakpoints.down("sm")]: {},
+  [theme.breakpoints.down("xs")]: {},
+}))
+const Arrow = styled(Box)(({ theme }) => ({
+width:"100%",
+    display:"flex", 
+    // border:"2px solid red",
+    flexDirection:"column",
+    position:"sticky",
+    top:100,
 
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
@@ -127,7 +149,9 @@ const Div = styled(Box)(({ theme }) => ({
 
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
-  [theme.breakpoints.down("md")]: {},
+  [theme.breakpoints.down("md")]: {
+    flexDirection:"column"
+  },
   [theme.breakpoints.down("sm")]: {},
   [theme.breakpoints.down("xs")]: {},
 }))
@@ -152,6 +176,18 @@ const TextBox = styled(Typography)(({ theme }) => ({
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
   [theme.breakpoints.down("md")]: {},
+  [theme.breakpoints.down("sm")]: {},
+  [theme.breakpoints.down("xs")]: {},
+}))
+const TextBoxOne = styled(Typography)(({ theme }) => ({
+   color:'#3c3c3c',
+   width:"70%",
+
+  [theme.breakpoints.down("xl")]: {},
+  [theme.breakpoints.down("lg")]: {},
+  [theme.breakpoints.down("md")]: {
+       width:"100%",
+  },
   [theme.breakpoints.down("sm")]: {},
   [theme.breakpoints.down("xs")]: {},
 }))
@@ -225,7 +261,7 @@ function System() {
 
 <SubDiv>
     <TextBox sx={{fontWeight:500,fontSize:24,}}>Unifying Software, Systems & Applications</TextBox>
-    <TextBox sx={{width:"65%",fontSize:18,color:"#3c3c3c",}}>Decade of experience in integration with comprehensive services, seamlessly connecting software, systems, and applications for superior business outcomes.</TextBox>
+    <TextBoxOne sx={{fontSize:18,color:"#3c3c3c",}}>Decade of experience in integration with comprehensive services, seamlessly connecting software, systems, and applications for superior business outcomes.</TextBoxOne>
 </SubDiv>
 
 <Div>
@@ -248,8 +284,12 @@ function System() {
 </TextSec>
 
 </SecondDiv>
+  <Arrow>
+<Scroll/>
+</Arrow>
 
 <MidTit sx={{fontSize:36,color:"#404044",fontWeight:500,paddingTop:7,paddingBottom:2, fontFamily:'sans-serif'}}> Seamless Connectivity, Superior Performance: Explore System Integrations</MidTit>
+
 
 <MidDiv/>
 

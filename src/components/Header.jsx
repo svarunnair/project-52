@@ -119,7 +119,12 @@ const ImgWrap = styled(Box)(({ theme }) => ({
 }))
 
 const SideBox = styled(Box)(({ theme }) => ({
-  display:"flex",
+  display:"none",
+  
+  [theme.breakpoints.down("xl")]: {},
+  [theme.breakpoints.down("lg")]: {},
+  [theme.breakpoints.down("md")]: {
+    display:"flex",
   flexDirection:"column",
   height:"100%",
   width:"70%",
@@ -127,9 +132,6 @@ const SideBox = styled(Box)(({ theme }) => ({
   boxShadow: "rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px",
   position:"absolute",
   background:"white",
-  [theme.breakpoints.down("xl")]: {},
-  [theme.breakpoints.down("lg")]: {},
-  [theme.breakpoints.down("md")]: {
 
   },
   [theme.breakpoints.down("sm")]: {},
@@ -166,6 +168,9 @@ function Header() {
   const handleSystem=()=>{
     navigate('/system')
   }
+  const handleAbout=()=>{
+    navigate("/about")
+  }
     
   return (
     <OuterWrap>
@@ -191,7 +196,7 @@ function Header() {
         <TextOne sx={{fontWeight:600}}>Services</TextOne>
          <TextOne sx={{fontWeight:600}}>Solutions</TextOne>
           <TextOne sx={{fontWeight:600}}>Industries</TextOne>
-           <TextOne sx={{fontWeight:600}}>About Us</TextOne>
+           <TextOne onClick={handleAbout} sx={{fontWeight:600}}>About Us</TextOne>
             <TextOne sx={{fontWeight:600}}>Contact Us</TextOne>
             <Email onClick={handleEmail}>sales@nigussystems.com</Email>
               <Email>+91 98806 98312</Email>

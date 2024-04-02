@@ -1,8 +1,11 @@
 import { Box, Typography } from '@mui/material'
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
 import Header from '../components/Header'
 import ThumbUpIcon from '@mui/icons-material/ThumbUp';
+import ArrowCircleUpRoundedIcon from '@mui/icons-material/ArrowCircleUpRounded';
+import { useHref, useParams } from 'react-router-dom';
+
 
 
 const Container = styled(Box)(({ theme }) => ({
@@ -11,6 +14,8 @@ const Container = styled(Box)(({ theme }) => ({
     flexDirection:'column',
     gap:30,
     padding:35,
+    id:"container",
+    
 
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
@@ -196,6 +201,21 @@ const ImgSec = styled(Box)(({ theme }) => ({
 }))
 
 const SubDiv = styled(Box)(({ theme }) => ({
+   
+  [theme.breakpoints.down("xl")]: {},
+  [theme.breakpoints.down("lg")]: {},
+  [theme.breakpoints.down("md")]: {},
+  [theme.breakpoints.down("sm")]: {},
+  [theme.breakpoints.down("xs")]: {},
+}))
+const ArrowDiv = styled(Box)(({ theme }) => ({
+  
+  display:"flex",
+  justifyContent:"end",
+// border:"2px solid red",
+  position:"sticky",
+  top:100,
+  
    
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
@@ -486,6 +506,33 @@ const TextTwo = styled(Box)(({ theme }) => ({
 
 
 function Home() {
+
+  const [backToTop,setBackToTop]=useState(false)
+  const params=useParams()
+
+  console.log("HomeParams",params)
+
+  const scrollUp=()=>{
+    window.scrollTo({
+      top:0,
+      behavior:"smooth"
+    })
+  }
+
+  useEffect(()=>{
+    window.addEventListener("scroll",()=>{
+      if(window.scrollY>100){
+        setBackToTop(true)
+      }
+      else{
+         setBackToTop(false)
+      }
+    })
+  },[])
+
+
+
+
   return (
 <OuterWrapper>
 
@@ -526,7 +573,9 @@ Break down silos and enhance collaboration across your organization. Seamlessly 
 
 </Wrapper>
 </SecondBox>
-
+<ArrowDiv>
+{backToTop&&<ArrowCircleUpRoundedIcon onClick={scrollUp} sx={{color:"blue",}}/>}
+</ArrowDiv>
 
 <SubDiv sx={{fontWeight:"600",fontSize:40}}>
     Seamless Connectivity, Superior Performance: Explore System Integrations
@@ -553,6 +602,7 @@ Break down silos and enhance collaboration across your organization. Seamlessly 
 </BoxTwo>
 
 </ThirdDiv>
+
 
 <BoxFour>
 

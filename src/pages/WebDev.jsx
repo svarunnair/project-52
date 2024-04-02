@@ -5,6 +5,7 @@ import Footer from '../components/Footer'
 import HandshakeIcon from '@mui/icons-material/Handshake';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import { Slide } from '@mui/material';
+import Scroll from '../components/Scroll';
 const Container = styled(Box)(({ theme }) => ({
     // border:"2px solid red",
     padding:15,
@@ -415,6 +416,20 @@ const IconImgOne = styled(Box)(({ theme }) => ({
   [theme.breakpoints.down("sm")]: {},
   [theme.breakpoints.down("xs")]: {},
 }))
+const ArrowDiv = styled(Box)(({ theme }) => ({
+
+  //  border:"2px solid red",
+    width:"80%",
+    position:"sticky",
+    top:100,
+   
+   
+  [theme.breakpoints.down("xl")]: {},
+  [theme.breakpoints.down("lg")]: {},
+  [theme.breakpoints.down("md")]: {},
+  [theme.breakpoints.down("sm")]: {},
+  [theme.breakpoints.down("xs")]: {},
+}))
 
 
 
@@ -539,7 +554,9 @@ Future-Ready Solutions: Transforming Your Business With Innovative Software
     </TitleTwo>
 
     <SubDiv sx={{fontSize:19}}>Integrate any business application with new or existing systems</SubDiv>
-
+<ArrowDiv>
+  <Scroll/>
+</ArrowDiv>
     <DivOne>
         <DivOneBox>
         <IconImgOne as={"img"} src='http://www.nigussystems.com/images/apps.png'/>

@@ -1,7 +1,7 @@
 import { Box } from '@mui/material'
 import { blue } from '@mui/material/colors'
-import React from 'react'
-import { useNavigate } from 'react-router-dom'
+import React, { useState } from 'react'
+import { useLocation, useNavigate, useParams } from 'react-router-dom'
 import styled from 'styled-components'
 
 const OuterContainer = styled(Box)(({ theme }) => ({
@@ -30,7 +30,7 @@ const OuterContainer = styled(Box)(({ theme }) => ({
 const TitleOne = styled(Box)(({ theme }) => ({
 
     display:"flex",
-   
+
 
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
@@ -42,37 +42,55 @@ const TitleOne = styled(Box)(({ theme }) => ({
 
 function Navbar() {
   const navigate=useNavigate()
+  const path=useLocation()
 
-  const handleWeb=()=>{
+  console.log("paramss",path.pathname)
+
+  const [activePage, setActivePage] = useState("home");
+
+  const handlePageChange = (page) => {
+    setActivePage(page);
+  }
+
+  console.log("jn",activePage)
+  
+
+  const handleWeb=(webdev)=>{
+      setActivePage(webdev);
     navigate("/webdev")
   }
-  const handleApp=()=>{
+  const handleApp=(home)=>{
+    setActivePage(home);
     navigate('/home')
   }
-  const handleSoft=()=>{
+  const handleSoft=(soft)=>{
+    setActivePage(soft);
     navigate('/softdev')
   }
-  const handleSystem=()=>{
+  const handleSystem=(system)=>{
+    setActivePage(system);
     navigate('/system')
   }
-  const handleAi=()=>{
+  const handleAi=(aidev)=>{
+    setActivePage(aidev);
     navigate('/aidev')
   }
   return (
+    // style={{ fontWeight: activePage === "about" ? "bold" : "normal" }
     <OuterContainer>
-        <TitleOne onClick={handleWeb} sx={{fontWeight:"700",":hover":{color:"#33ace2"},cursor:"pointer"}}>
+        <TitleOne onClick={()=>handleWeb("webdev")} sx={{fontWeight:700,textDecoration:activePage==="webdev"?"underline":"none",color: activePage === "webdev" ? "#33ace2" : "normal",":hover":{color:"#33ace2",},cursor:"pointer"}}>
 Web Development 
         </TitleOne>
-         <TitleOne onClick={handleApp} sx={{fontWeight:"700",":hover":{color:"#33ace2"},cursor:"pointer"}}>
+         <TitleOne onClick={()=>handleApp("home")} sx={{fontWeight:700,textDecoration:activePage==="home"?"underline":"none",color: activePage === "home" ? "#33ace2" : "normal",":hover":{color:"#33ace2"},cursor:"pointer"}}>
 Application Development  
         </TitleOne>
-         <TitleOne onClick={handleSoft} sx={{fontWeight:"700",":hover":{color:"#33ace2"},cursor:"pointer"}}>
+         <TitleOne onClick={()=>handleSoft("soft")} sx={{fontWeight:700,textDecoration:activePage==="soft"?"underline":"none",color: activePage === "soft" ? "#33ace2" : "normal",":hover":{color:"#33ace2"},cursor:"pointer"}}>
 Software Development
         </TitleOne>
-         <TitleOne onClick={handleAi} sx={{fontWeight:"700",":hover":{color:"#33ace2"},cursor:"pointer"}}>
+         <TitleOne onClick={()=>handleAi("aidev")} sx={{fontWeight:700,textDecoration:activePage==="aidev"?"underline":"none",color: activePage === "aidev" ? "#33ace2" : "normal",":hover":{color:"#33ace2"},cursor:"pointer"}}>
 AI/ML Development 
         </TitleOne>
-         <TitleOne onClick={handleSystem} sx={{fontWeight:"700",":hover":{color:"#33ace2"},cursor:"pointer"}}>
+         <TitleOne onClick={()=>handleSystem("system")} sx={{fontWeight:700,textDecoration:activePage==="system"?"underline":"none",color: activePage === "system" ? "#33ace2" : "normal",":hover":{color:"#33ace2"},cursor:"pointer"}}>
 System Integration
         </TitleOne>
     </OuterContainer>

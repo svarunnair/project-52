@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import MidDiv from '../components/MidDiv'
 import FooterIcons from '../components/FooterIcons'
 import Footer from '../components/Footer'
+import Scroll from '../components/Scroll'
 
 const Container = styled(Box)(({ theme }) => ({
    padding:50,
@@ -114,6 +115,21 @@ const Wrapper = styled(Box)(({ theme }) => ({
   [theme.breakpoints.down("md")]: {
     flexDirection:"column",
   },
+  [theme.breakpoints.down("sm")]: {},
+  [theme.breakpoints.down("xs")]: {},
+}))
+const Arrow = styled(Box)(({ theme }) => ({
+width:"100%",
+    display:"flex", 
+    // border:"2px solid red",
+    flexDirection:"column",
+
+    position:"sticky",
+    top:100,
+
+  [theme.breakpoints.down("xl")]: {},
+  [theme.breakpoints.down("lg")]: {},
+  [theme.breakpoints.down("md")]: {},
   [theme.breakpoints.down("sm")]: {},
   [theme.breakpoints.down("xs")]: {},
 }))
@@ -243,6 +259,8 @@ Break down silos and enhance collaboration across your organization. Seamlessly 
 
 </SecondDetail>
 
+  
+
 <SecondDetail  sx={{fontSize:"19px",color:"#3c3c3c",paddingTop:1}}>
     Stay ahead in a dynamic landscape with our forward-thinking system integrations. Embrace innovation as we align and future-proof your technology infrastructure for sustained success.
 </SecondDetail>
@@ -282,7 +300,9 @@ Ignite innovation as our expert integrations connect and enhance your IT softwar
 
 
 </BoxFour>
-
+<Arrow>
+<Scroll/>
+</Arrow>
 <FooterIcons/>
 
 
