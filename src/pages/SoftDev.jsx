@@ -26,7 +26,9 @@ const FirstDiv = styled(Box)(({ theme }) => ({
 
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
-  [theme.breakpoints.down("md")]: {},
+  [theme.breakpoints.down("md")]: {
+    flexDirection:"column",
+  },
   [theme.breakpoints.down("sm")]: {},
   [theme.breakpoints.down("xs")]: {},
 }))
@@ -55,7 +57,9 @@ const SecondDiv = styled(Box)(({ theme }) => ({
 
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
-  [theme.breakpoints.down("md")]: {},
+  [theme.breakpoints.down("md")]: {
+    flexDirection:"column"
+  },
   [theme.breakpoints.down("sm")]: {},
   [theme.breakpoints.down("xs")]: {},
 }))
@@ -74,7 +78,9 @@ const ImgSec = styled(Box)(({ theme }) => ({
 
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
-  [theme.breakpoints.down("md")]: {},
+  [theme.breakpoints.down("md")]: {
+        width:"100%",
+  },
   [theme.breakpoints.down("sm")]: {},
   [theme.breakpoints.down("xs")]: {},
 }))
@@ -86,7 +92,9 @@ const TextSec = styled(Typography)(({ theme }) => ({
 
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
-  [theme.breakpoints.down("md")]: {},
+  [theme.breakpoints.down("md")]: {
+      width:"100%",
+  },
   [theme.breakpoints.down("sm")]: {},
   [theme.breakpoints.down("xs")]: {},
 }))
@@ -98,11 +106,14 @@ const SubDiv = styled(Box)(({ theme }) => ({
     justifyContent:"center",
     alignItems:"center",
     padding:35,
+  
    
 
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
-  [theme.breakpoints.down("md")]: {},
+  [theme.breakpoints.down("md")]: {
+ padding:5,
+  },
   [theme.breakpoints.down("sm")]: {},
   [theme.breakpoints.down("xs")]: {},
 }))
@@ -115,7 +126,9 @@ const Div = styled(Box)(({ theme }) => ({
 
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
-  [theme.breakpoints.down("md")]: {},
+  [theme.breakpoints.down("md")]: {
+    flexDirection:"column",
+  },
   [theme.breakpoints.down("sm")]: {},
   [theme.breakpoints.down("xs")]: {},
 }))
@@ -138,7 +151,9 @@ const TextBox = styled(Typography)(({ theme }) => ({
 
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
-  [theme.breakpoints.down("md")]: {},
+  [theme.breakpoints.down("md")]: {
+    textAlign:"center",
+  },
   [theme.breakpoints.down("sm")]: {},
   [theme.breakpoints.down("xs")]: {},
 }))
@@ -150,7 +165,9 @@ const FirstText = styled(Box)(({ theme }) => ({
 textAlign:"left",
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
-  [theme.breakpoints.down("md")]: {},
+  [theme.breakpoints.down("md")]: {
+       width:"100%",
+  },
   [theme.breakpoints.down("sm")]: {},
   [theme.breakpoints.down("xs")]: {},
 }))
@@ -159,7 +176,10 @@ const Header = styled(Typography)(({ theme }) => ({
 textAlign:"left",
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
-  [theme.breakpoints.down("md")]: {},
+  [theme.breakpoints.down("md")]: {
+     
+textAlign:"center",
+  },
   [theme.breakpoints.down("sm")]: {},
   [theme.breakpoints.down("xs")]: {},
 }))
@@ -177,7 +197,9 @@ const FirstImg = styled(Box)(({ theme }) => ({
 color:"grey",
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
-  [theme.breakpoints.down("md")]: {},
+  [theme.breakpoints.down("md")]: {
+     width:"100%",
+  },
   [theme.breakpoints.down("sm")]: {},
   [theme.breakpoints.down("xs")]: {},
 }))

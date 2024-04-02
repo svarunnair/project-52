@@ -28,7 +28,9 @@ const IconBox = styled(Box)(({ theme }) => ({
    gap:50,
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
-  [theme.breakpoints.down("md")]: {},
+  [theme.breakpoints.down("md")]: {
+    flexDirection:"column",
+  },
   [theme.breakpoints.down("sm")]: {},
   [theme.breakpoints.down("xs")]: {},
 }))

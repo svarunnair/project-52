@@ -27,7 +27,10 @@ const BoxOne = styled(Box)(({ theme }) => ({
 
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
-  [theme.breakpoints.down("md")]: {},
+  [theme.breakpoints.down("md")]: {
+    display:"flex",
+    flexDirection:"column",
+  },
   [theme.breakpoints.down("sm")]: {},
   [theme.breakpoints.down("xs")]: {},
 }))
@@ -44,11 +47,18 @@ const OuterDiv = styled(Box)(({ theme }) => ({
 
 const BottomBox = styled(Box)(({ theme }) => ({
     display:"flex",
-    // border:"2px solid green",
-    padding:30,
+    // border:"2px solid red",
+    padding:20,
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
-  [theme.breakpoints.down("md")]: {},
+  [theme.breakpoints.down("md")]: {
+      justifyContent:"center",
+   flexDirection:"column-reverse",
+      justifyItems:"center",
+      alignItems:"center",
+          padding:0,
+  },
+    
   [theme.breakpoints.down("sm")]: {},
   [theme.breakpoints.down("xs")]: {},
 }))
@@ -60,7 +70,9 @@ const BottomData = styled(Typography)(({ theme }) => ({
 
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
-  [theme.breakpoints.down("md")]: {},
+  [theme.breakpoints.down("md")]: {
+        textAlign:"center",
+  },
   [theme.breakpoints.down("sm")]: {},
   [theme.breakpoints.down("xs")]: {},
 }))
@@ -74,13 +86,16 @@ const BottomOne = styled(Typography)(({ theme }) => ({
 
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
-  [theme.breakpoints.down("md")]: {},
+  [theme.breakpoints.down("md")]: {
+    width:"80%",
+       padding:20,
+  },
   [theme.breakpoints.down("sm")]: {},
   [theme.breakpoints.down("xs")]: {},
 }))
 const BottomTwo = styled(Typography)(({ theme }) => ({
 
-    // border:"2px solid black",
+    // border:"2px solid yellow",
 
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
@@ -94,7 +109,9 @@ const BottomImg = styled(Box)(({ theme }) => ({
 
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
-  [theme.breakpoints.down("md")]: {},
+  [theme.breakpoints.down("md")]: {
+        width:"100%",
+  },
   [theme.breakpoints.down("sm")]: {},
   [theme.breakpoints.down("xs")]: {},
 }))
@@ -123,7 +140,9 @@ const DetailOne = styled(Box)(({ theme }) => ({
     justifyContent:"flex-start",
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
-  [theme.breakpoints.down("md")]: {},
+  [theme.breakpoints.down("md")]: {
+width:"100%",
+  },
   [theme.breakpoints.down("sm")]: {},
   [theme.breakpoints.down("xs")]: {},
 }))
@@ -134,26 +153,35 @@ const ImgOne = styled(Box)(({ theme }) => ({
 
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
-  [theme.breakpoints.down("md")]: {},
+  [theme.breakpoints.down("md")]: {
+      width:"100%",
+  },
   [theme.breakpoints.down("sm")]: {},
   [theme.breakpoints.down("xs")]: {},
 }))
 const TitleOne = styled(Typography)(({ theme }) => ({
     textAlign:"left",
 
+
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
-  [theme.breakpoints.down("md")]: {},
+  [theme.breakpoints.down("md")]: {
+      textAlign:"center",
+  },
   [theme.breakpoints.down("sm")]: {},
   [theme.breakpoints.down("xs")]: {},
 }))
 const DiscOne = styled(Typography)(({ theme }) => ({
     textAlign:"left",
     color:"grey",
+    // border:"2px solid red",
 
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
-  [theme.breakpoints.down("md")]: {},
+  [theme.breakpoints.down("md")]: {
+      textAlign:"center",
+      width:"100%",
+  },
   [theme.breakpoints.down("sm")]: {},
   [theme.breakpoints.down("xs")]: {},
 }))
@@ -184,11 +212,28 @@ height:350,
 }))
 
 const ImgCli = styled(Box)(({ theme }) => ({
-// border:"2px solid red",
+// border:"2px solid green",
 
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
-  [theme.breakpoints.down("md")]: {},
+  [theme.breakpoints.down("md")]: {
+    width:"100%",
+  },
+  [theme.breakpoints.down("sm")]: {},
+  [theme.breakpoints.down("xs")]: {},
+}))
+const ImgCliOuter = styled(Box)(({ theme }) => ({
+// border:"2px solid blue",
+width:"100%",
+display:"flex",
+justifyContent:"center",
+alignItems:"center",
+
+  [theme.breakpoints.down("xl")]: {},
+  [theme.breakpoints.down("lg")]: {},
+  [theme.breakpoints.down("md")]: {
+    width:"50%",
+  },
   [theme.breakpoints.down("sm")]: {},
   [theme.breakpoints.down("xs")]: {},
 }))
@@ -222,26 +267,35 @@ const DivOne = styled(Box)(({ theme }) => ({
     paddingTop:40,
     display:"flex",
     gap:20,
+    justifyContent:"center",
  
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
-  [theme.breakpoints.down("md")]: {},
+  [theme.breakpoints.down("md")]: {
+    display:"grid",
+    gridTemplateColumns:"repeat(2,1fr)",
+  },
   [theme.breakpoints.down("sm")]: {},
   [theme.breakpoints.down("xs")]: {},
 }))
 
 const IconSecond = styled(Box)(({ theme }) => ({
  display:"flex",
- flexDirection:"column",
- justifyContent:"end",
-//  border:"2px solid red",
- paddingLeft:50,
+justifyContent:"center",
+//  border:"22px solid red",
+paddingTop:"20px",
+gap:20,
  
 
  
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
-  [theme.breakpoints.down("md")]: {},
+  [theme.breakpoints.down("md")]: {
+     display:"grid",
+     gridTemplateColumns:"repeat(2,1fr)",
+paddingTop:"20px",
+gap:20,
+  },
   [theme.breakpoints.down("sm")]: {},
   [theme.breakpoints.down("xs")]: {},
 }))
@@ -262,21 +316,23 @@ padding:40,
 const IconDiv = styled(Box)(({ theme }) => ({
     display:"flex",
     flexDirection:"column",
-height:300,
-width:"18%",
-
+    // border:"2px solid green",
  boxShadow: "rgba(149, 157, 165, 0.2) 0px 8px 24px",
+
+
 
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
-  [theme.breakpoints.down("md")]: {},
+  [theme.breakpoints.down("md")]: {
+    width:"100%",
+  },
   [theme.breakpoints.down("sm")]: {},
   [theme.breakpoints.down("xs")]: {},
 }))
 
 const ImgIcon = styled(Box)(({ theme }) => ({
-width:"40%",
-paddingTop:30,
+width:"70%",
+paddingTop:0,
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
   [theme.breakpoints.down("md")]: {},
@@ -301,6 +357,7 @@ const SecondIcon = styled(Box)(({ theme }) => ({
 
     boxShadow: "rgba(149, 157, 165, 0.2) 0px 8px 24px",
     width:"15%",
+    border:"2px solid red",
     height:150,
     padding:30,
     gap:30,
@@ -312,7 +369,8 @@ const SecondIcon = styled(Box)(({ theme }) => ({
   [theme.breakpoints.down("xs")]: {},
 }))
 const ImgSecond = styled(Box)(({ theme }) => ({
-width:"50%",
+width:"80%",
+border:"2px solid red",
  
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
@@ -323,7 +381,8 @@ width:"50%",
 const WrapIcon = styled(Box)(({ theme }) => ({
     display:"flex",
     flexDirection:"column",
-
+// border:"2px solid blue",
+padding:35,
     justifyContent:"center",
     alignItems:"center",
  
@@ -335,8 +394,8 @@ const WrapIcon = styled(Box)(({ theme }) => ({
 }))
 const DivOneBox = styled(Box)(({ theme }) => ({
 
-padding:20,
-    boxShadow:" rgba(149, 157, 165, 0.2) 0px 8px 24px",
+   padding:20,
+  boxShadow:" rgba(149, 157, 165, 0.2) 0px 8px 24px",
 
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
@@ -345,9 +404,10 @@ padding:20,
   [theme.breakpoints.down("xs")]: {},
 }))
 const IconImgOne = styled(Box)(({ theme }) => ({
-    // border:"2px solid red",
+
+  //  border:"2px solid red",
+    width:"80%",
    
-    width:"70%",
    
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
@@ -409,7 +469,7 @@ setValueTwo(0)
 
    let image_set = [ 'http://www.nigussystems.com/images/slider2.png',
       'http://www.nigussystems.com/images/slider1.png',
-      'http://www.nigussystems.com/images/slider2.png']
+     ]
 
 
  useEffect(() => {
@@ -419,7 +479,7 @@ setValueTwo(0)
     } else {
       setCount(count + 1);
     }
-  }, 3000);
+  }, 2000);
 
   return () => clearInterval(interval);
 }, [count]);
@@ -451,7 +511,7 @@ console.log("count",count)
     <ClientDiv>
 
 {/* <ImgCli as="img" src={image_set[count]}/> */}
- <Box sx={{position: 'relative',
+ <ImgCliOuter sx={{position: 'relative',
     width: '100%',
     height: 'auto',
     overflow: 'hidden',}}>
@@ -469,10 +529,7 @@ console.log("count",count)
     transition: 'left 0.5s ease-in-out',}} src={image} alt={`Image ${index + 1}`} />
         </Slide>
       ))}
- </Box>
-
-       
-    
+ </ImgCliOuter>
 
 
     </ClientDiv>
@@ -494,32 +551,23 @@ Future-Ready Solutions: Transforming Your Business With Innovative Software
         <TextBox sx={{fontWeight:600,}}>Web Development</TextBox>
 
         </DivOneBox>
+
+
+        <DivOneBox>
+    <IconImgOne as={"img"} src='http://www.nigussystems.com/images/unified%20communications.png'/>
+    <TextBox sx={{fontWeight:600,}}>Software Development</TextBox>
+
+    </DivOneBox>
+
+    <DivOneBox>
+ <IconImgOne as={"img"} src='http://www.nigussystems.com/images/application-integration.png'/>
+  <TextBox sx={{fontWeight:600,}}> AI/ML Development</TextBox>
+    </DivOneBox>
         
     </DivOne>
     
-
-
+ <IconSecond>
     
-
-    </Container>
-
-    <IconSecond>
-    <SecondIcon>
-    <ImgSecond as={"img"} src='http://www.nigussystems.com/images/unified%20communications.png'/>
-    <TextBox sx={{fontWeight:600,}}>Software Development</TextBox>
-
-    </SecondIcon>
-
-    <SecondIcon>
- <ImgSecond as={"img"} src='http://www.nigussystems.com/images/application-integration.png'/>
-  <TextBox sx={{fontWeight:600,}}> AI/ML Development</TextBox>
-    </SecondIcon>
-
-
-    </IconSecond>
-
-    <ThirdIcon>
-
     <IconDiv  onMouseEnter={handleEnter} onMouseLeave={handleExit}>
     <HandshakeIcon sx={{position:"absolute",paddingTop:`${value}px`}}/>
     <WrapIcon>
@@ -534,7 +582,7 @@ Future-Ready Solutions: Transforming Your Business With Innovative Software
     <HandshakeIcon sx={{position:"absolute",paddingTop:`${valueOne}px`,}}/>
     <WrapIcon>
 <ImgIcon as={"img"} src='http://www.nigussystems.com/images/crm%20integration.png'/>
-<TextBox sx={{fontWeight:600,width:"50%"}}>CRM Integration</TextBox>
+<TextBox sx={{fontWeight:600,width:"100%"}}>CRM Integration</TextBox>
 </WrapIcon>
     </IconDiv>
 
@@ -543,11 +591,24 @@ Future-Ready Solutions: Transforming Your Business With Innovative Software
     <HandshakeIcon sx={{position:"absolute",paddingTop:`${valueTwo}px`}}/>
     <WrapIcon>
 <ImgIcon as={"img"} src='http://www.nigussystems.com/images/web-conferencing.png'/>
-<TextBox sx={{fontWeight:600,width:"50%"}}>Application Integration</TextBox>
+<TextBox sx={{fontWeight:600,width:"100%"}}>Application Integration</TextBox>
 </WrapIcon>
     </IconDiv>
 
+
+    </IconSecond>
+
+    <ThirdIcon>
+
+    
+
     </ThirdIcon>
+
+    
+
+    </Container>
+
+   
 
     <BottomBox>
     <BottomOne>

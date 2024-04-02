@@ -19,11 +19,14 @@ const TextTwo = styled(Box)(({ theme }) => ({
 const ThirdDiv = styled(Box)(({ theme }) => ({
    display:"flex",
    justifyContent:"center",
+  //  border:"2px solid red",
    padding:10,
    gap:20,
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
-  [theme.breakpoints.down("md")]: {},
+  [theme.breakpoints.down("md")]: {
+    flexDirection:"column",
+  },
   [theme.breakpoints.down("sm")]: {},
   [theme.breakpoints.down("xs")]: {},
 }))
@@ -59,7 +62,10 @@ boxShadow: 'rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px
    
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
-  [theme.breakpoints.down("md")]: {},
+  [theme.breakpoints.down("md")]: {
+      width:"100%",
+          padding:0,
+  },
   [theme.breakpoints.down("sm")]: {},
   [theme.breakpoints.down("xs")]: {},
 }))

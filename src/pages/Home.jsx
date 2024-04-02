@@ -36,14 +36,17 @@ const FirstBox = styled(Box)(({ theme }) => ({
 
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
-  [theme.breakpoints.down("md")]: {},
+  [theme.breakpoints.down("md")]: {
+     display:"flex",
+     flexDirection:"column",
+  },
   [theme.breakpoints.down("sm")]: {},
   [theme.breakpoints.down("xs")]: {},
 }))
 
 const SecondBox = styled(Box)(({ theme }) => ({
 
-
+// border:"2px solid red",
     justifyContent:"center",
 
 
@@ -67,7 +70,9 @@ flexDirection:"column",
 
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
-  [theme.breakpoints.down("md")]: {},
+  [theme.breakpoints.down("md")]: {
+    textAlign:"center",
+  },
   [theme.breakpoints.down("sm")]: {},
   [theme.breakpoints.down("xs")]: {},
 }))
@@ -120,7 +125,9 @@ const InnerImg = styled(Box)(({ theme }) => ({
 
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
-  [theme.breakpoints.down("md")]: {},
+  [theme.breakpoints.down("md")]: {
+      width:"100%",
+  },
   [theme.breakpoints.down("sm")]: {},
   [theme.breakpoints.down("xs")]: {},
 }))
@@ -132,7 +139,9 @@ const TextInner = styled(Typography)(({ theme }) => ({
 
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
-  [theme.breakpoints.down("md")]: {},
+  [theme.breakpoints.down("md")]: {
+        textAlign:"center",
+  },
   [theme.breakpoints.down("sm")]: {},
   [theme.breakpoints.down("xs")]: {},
 }))
@@ -143,7 +152,9 @@ const TextDes = styled(Typography)(({ theme }) => ({
  textAlign:"left",
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
-  [theme.breakpoints.down("md")]: {},
+  [theme.breakpoints.down("md")]: {
+     textAlign:"center",
+  },
   [theme.breakpoints.down("sm")]: {},
   [theme.breakpoints.down("xs")]: {},
 }))
@@ -152,7 +163,9 @@ const Wrapper = styled(Box)(({ theme }) => ({
    display:"flex",
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
-  [theme.breakpoints.down("md")]: {},
+  [theme.breakpoints.down("md")]: {
+    flexDirection:"column"
+  },
   [theme.breakpoints.down("sm")]: {},
   [theme.breakpoints.down("xs")]: {},
 }))
@@ -175,7 +188,9 @@ const ImgSec = styled(Box)(({ theme }) => ({
    
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
-  [theme.breakpoints.down("md")]: {},
+  [theme.breakpoints.down("md")]: {
+      width:"100%",
+  },
   [theme.breakpoints.down("sm")]: {},
   [theme.breakpoints.down("xs")]: {},
 }))
@@ -197,7 +212,9 @@ const ThirdDiv = styled(Box)(({ theme }) => ({
    gap:20,
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
-  [theme.breakpoints.down("md")]: {},
+  [theme.breakpoints.down("md")]: {
+    flexDirection:"column",
+  },
   [theme.breakpoints.down("sm")]: {},
   [theme.breakpoints.down("xs")]: {},
 }))
@@ -206,7 +223,9 @@ const BoxFour = styled(Box)(({ theme }) => ({
    display:"flex",
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
-  [theme.breakpoints.down("md")]: {},
+  [theme.breakpoints.down("md")]: {
+    flexDirection:"column",
+  },
   [theme.breakpoints.down("sm")]: {},
   [theme.breakpoints.down("xs")]: {},
 }))
@@ -229,7 +248,9 @@ const BottomWrap = styled(Typography)(({ theme }) => ({
  
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
-  [theme.breakpoints.down("md")]: {},
+  [theme.breakpoints.down("md")]: {
+     padding:10,
+  },
   [theme.breakpoints.down("sm")]: {},
   [theme.breakpoints.down("xs")]: {},
 }))
@@ -274,7 +295,9 @@ const IconBox = styled(Box)(({ theme }) => ({
    gap:50,
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
-  [theme.breakpoints.down("md")]: {},
+  [theme.breakpoints.down("md")]: {
+    flexDirection:"column",
+  },
   [theme.breakpoints.down("sm")]: {},
   [theme.breakpoints.down("xs")]: {},
 }))
@@ -414,7 +437,9 @@ boxShadow: 'rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 
    
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
-  [theme.breakpoints.down("md")]: {},
+  [theme.breakpoints.down("md")]: {
+       width:"100%",
+  },
   [theme.breakpoints.down("sm")]: {},
   [theme.breakpoints.down("xs")]: {},
 }))
@@ -454,6 +479,7 @@ const TextTwo = styled(Box)(({ theme }) => ({
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
   [theme.breakpoints.down("md")]: {},
+     textAlign:"center",
   [theme.breakpoints.down("sm")]: {},
   [theme.breakpoints.down("xs")]: {},
 }))
