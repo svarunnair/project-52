@@ -18,6 +18,11 @@ import intig from '../components/Images/integration-logo.png'
 import slider1 from '../components/Images/slider1.png'
 import slider2 from '../components/Images/slider2.png'
 import gif from '../components/Images/logogiff.gif'
+import it1 from '../components/Images/it.png'
+import it2 from '../components/Images/it5.jpeg'
+import it3 from '../components/Images/it3.jpeg'
+
+
 
 const Container = styled(Box)(({ theme }) => ({
     // border:"2px solid red",
@@ -479,8 +484,8 @@ function WebDev() {
 
 
 
-   let image_set = [ {slider1},
-      {slider2},
+   let image_set = [ "http://www.nigussystems.com/images/service-mobility.png",
+      "http://www.nigussystems.com/images/versatality-features.png",
      ]
 
 
@@ -521,28 +526,9 @@ console.log("count",count)
     <TextBox sx={{fontSize:24,color:"#404044",fontWeight:500,}}>Our Clients</TextBox>
 
     <ClientDiv>
-
-{/* <ImgCli as="img" src={image_set[count]}/> */}
- <ImgCliOuter sx={{position: 'relative',
-    width: '100%',
-    height: 'auto',
-    overflow: 'hidden',}}>
- {image_set.map((image, index) => (
-        <Slide
-          key={index}
-          in={index === count}
-          direction="right"
-          mountOnEnter
-          unmountOnExit
-        >
-          <ImgCli as="img" sx={{ position: 'absolute',
-    top: 0,
-    left: '-100%',
-    transition: 'left 0.2s ease-in-out',}} src={image} alt={`Image ${index + 1}`} />
-        </Slide>
-      ))}
- </ImgCliOuter>
-
+    <ImgCli as={"img"} src={it1}/>
+    <ImgCli as={"img"} src={it2}/>
+    <ImgCli as={"img"} src={it3}/>
 
     </ClientDiv>
 
