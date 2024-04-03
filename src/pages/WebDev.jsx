@@ -461,52 +461,9 @@ const ArrowDiv = styled(Box)(({ theme }) => ({
 
 
 
-
-
-
-
-
 function WebDev() {
-    const [move,setMove]=useState(false)
-       const [value,setValue]=useState(0)
-         const [valueOne,setValueOne]=useState(0)
-          const [valueTwo,setValueTwo]=useState(0)
+   
      const [count,setCount]=useState(false)
-
-
-
-
-const handleEnter = ()=>{
-  console.log("Enter")
-setValue(50)
-}
-
-const handleExit = ()=> {
-  console.log("Exit")
-setValue(0)
-}
-
-
-
-const handleEnterOne = ()=>{
-  console.log("Enter")
-setValueOne(50)
-}
-
-const handleExitOne = ()=> {
-  console.log("Exit")
-setValueOne(0)
-}
-
-const handleEnterTwo = ()=>{
-  console.log("Enter")
-setValueTwo(50)
-}
-
-const handleExitTwo = ()=> {
-  console.log("Exit")
-setValueTwo(0)
-}
 
 
 

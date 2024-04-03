@@ -544,6 +544,7 @@ function Home() {
 <TextDes >From concept to deployment, we are dedicated to delivering top-notch solutions that elevate your digital presence and exceed your expectations.</TextDes>
         </InnerOne>
 
+
 <InnerImg as={"img"} src='http://www.nigussystems.com/images/complete-callcenter-solution.gif'/>
 
         </FirstBox>
