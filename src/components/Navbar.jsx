@@ -46,13 +46,16 @@ function Navbar() {
 
   console.log("paramss",path.pathname)
 
-  const [activePage, setActivePage] = useState("home");
+  const [activePage, setActivePage] = useState("webdev");
 
   const handlePageChange = (page) => {
     setActivePage(page);
   }
 
+  
+
   console.log("jn",activePage)
+  
   
 
   const handleWeb=(webdev)=>{

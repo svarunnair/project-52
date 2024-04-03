@@ -141,6 +141,14 @@ const Div = styled(Box)(({ theme }) => ({
     display:"flex",
     justifyContent:"center",
     gap:20,
+      ":hover":{
+      transitionDuration:".3s",
+      transform:"scale(1.2)",
+      background:"#33ace2",
+      color:"whitesmoke"
+    },
+ 
+    cursor:"pointer",
  
 
   [theme.breakpoints.down("xl")]: {},
@@ -156,6 +164,7 @@ const DivOne = styled(Box)(({ theme }) => ({
     display:"flex",
     boxShadow: "rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px",
     padding:33,
+    
  
  borderRadius:10,
   [theme.breakpoints.down("xl")]: {},

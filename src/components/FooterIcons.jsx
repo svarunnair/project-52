@@ -29,6 +29,7 @@ const IconBox = styled(Box)(({ theme }) => ({
    display:"flex",
    justifyContent:"center",
    gap:50,
+ 
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
   [theme.breakpoints.down("md")]: {
@@ -42,7 +43,12 @@ const IconOne = styled(Box)(({ theme }) => ({
    flexDirection:"column",
    justifyContent:"center",
       alignItems:"center",
+      ":hover":{
+        transitionDuration:'.5s',
+        
+      },
    
+    
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
   [theme.breakpoints.down("md")]: {},
@@ -66,6 +72,7 @@ const ImgIcon = styled(Box)(({ theme }) => ({
    display:"flex",
    flexDirection:"column",
    width:"50%",
+    
   
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},

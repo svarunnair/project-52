@@ -56,6 +56,12 @@ const BoxOne = styled(Box)(({ theme }) => ({
     alignItems:"center",
     width:"50%",
 boxShadow: 'rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px',
+cursor:"pointer",
+":hover":{
+  transitionDuration:".3s",
+  transform:"scale(1.2)",
+},
+
     padding:25,
    
     gap:20,
@@ -96,11 +102,11 @@ function MidDiv() {
     <ThirdDiv>
 
 <BoxOne>
-<ThumbUpIcon sx={{color:"#1b3d9b",width:"230px"}}/>
-<Head sx={{fontSize:"22px",fontWeight:"600"}}>
+<ThumbUpIcon sx={{color:"#1b3d9b",width:"230px",transitionDuration:".3s",}}/>
+<Head sx={{fontSize:"22px",fontWeight:"600",transitionDuration:".3s",}}>
  Proven Expertise and Reliability   
 </Head>
-<Disc>Customers choose us for our proven IT expertise, track record of successful projects, and a dedicated team, instilling confidence through reliable and high-quality services.</Disc>
+<Disc >Customers choose us for our proven IT expertise, track record of successful projects, and a dedicated team, instilling confidence through reliable and high-quality services.</Disc>
 
 </BoxOne>
 

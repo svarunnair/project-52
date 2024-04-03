@@ -130,9 +130,12 @@ const InnerOne = styled(Box)(({ theme }) => ({
 
 const InnerImg = styled(Box)(({ theme }) => ({
     display:"flex",
-
+// border:"2px solid red",
+boxShadow: "rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px",
+borderRadius:30,
     width:"50%",
     height:"80%",
+  
 
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
@@ -196,6 +199,8 @@ const Detail = styled(Box)(({ theme }) => ({
 
 const ImgSec = styled(Box)(({ theme }) => ({
   width:"50%",
+  boxShadow: "rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px",
+  borderRadius:30,
    
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
@@ -331,7 +336,9 @@ const IconBox = styled(Box)(({ theme }) => ({
 const IconOne = styled(Box)(({ theme }) => ({
    display:"flex",
    flexDirection:"column",
+
    justifyContent:"center",
+  
       alignItems:"center",
 
   [theme.breakpoints.down("xl")]: {},
@@ -457,9 +464,15 @@ const BoxOne = styled(Box)(({ theme }) => ({
     justifyContent:"center",
     alignItems:"center",
     width:"50%",
-boxShadow: 'rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px',
+boxShadow: 'rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px',
     padding:25,
     gap:20,
+    cursor:"pointer",
+":hover":{
+  transitionDuration:".3s",
+  transform:"scale(1.2)",
+
+},
    
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
@@ -485,6 +498,7 @@ const BoxTwo = styled(Box)(({ theme }) => ({
     display:"flex",
     flexDirection:"column",
     gap:20,
+    padding:20,
 
     // alignItems:'center',
     justifyContent:"center",
@@ -602,8 +616,8 @@ Break down silos and enhance collaboration across your organization. Seamlessly 
 
 <BoxTwo>
 
-<TextTwo sx={{fontSize:"20px"}}>Discover the power of seamless connectivity. Our system integration solutions ensure superior performance by intelligently connecting and synchronizing your diverse technological components.</TextTwo>
-<TextTwo sx={{fontSize:"20px"}}>Experience a revolution in business operations. Our system integrations bridge gaps, enabling a cohesive and responsive environment that unlocks the full potential of your technological ecosystem.</TextTwo>
+<TextTwo sx={{fontSize:"20px",textAlign:"left"}}>Discover the power of seamless connectivity. Our system integration solutions ensure superior performance by intelligently connecting and synchronizing your diverse technological components.</TextTwo>
+<TextTwo sx={{fontSize:"20px",textAlign:"left"}}>Experience a revolution in business operations. Our system integrations bridge gaps, enabling a cohesive and responsive environment that unlocks the full potential of your technological ecosystem.</TextTwo>
 
 
 </BoxTwo>

@@ -1,4 +1,4 @@
-import { Box, Typography } from '@mui/material'
+import { Box, Button, Typography } from '@mui/material'
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import PermIdentityOutlinedIcon from '@mui/icons-material/PermIdentityOutlined';
@@ -71,12 +71,18 @@ color:"grey",
   [theme.breakpoints.down("xs")]: {},
 }))
 
-const BottonBox = styled(Box)(({ theme }) => ({
+const BottonBox = styled(Button)(({ theme }) => ({
 
     display:"flex",
-    background:"#33ace2",
-    padding:3,
-    color:"white",
+    color:"#33ace2",
+    ":hover":{
+      color:"black",
+      background:"whitesmoke"
+    },
+    borderRadius:35,
+    boxShadow: "rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px",
+
+    // color:"white",
       cursor:"pointer",
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},

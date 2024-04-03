@@ -21,6 +21,14 @@ import gif from '../components/Images/logogiff.gif'
 import it1 from '../components/Images/it.png'
 import it2 from '../components/Images/it5.jpeg'
 import it3 from '../components/Images/it3.jpeg'
+import adv from '../components/video/video_2024-04-03_15-47-43.mp4'
+import Marquee from "react-fast-marquee";
+import scroll1 from '../components/Images/scroll1.png'
+import scroll2 from '../components/Images/scroll2.png'
+import scroll3 from '../components/Images/scroll3.png'
+import scroll5 from '../components/Images/scroll5.png'
+import scroll6 from '../components/Images/scroll6.png'
+// import styledd from 'styled-components';
 
 
 
@@ -113,8 +121,13 @@ const BottomOne = styled(Typography)(({ theme }) => ({
   [theme.breakpoints.down("xs")]: {},
 }))
 const BottomTwo = styled(Typography)(({ theme }) => ({
-
+cursor:"grab",
     // border:"2px solid yellow",
+    ":hover":{
+      transitionDuration:".5s",
+      transform:"scale(1.2)"
+    },
+
 
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
@@ -125,6 +138,10 @@ const BottomTwo = styled(Typography)(({ theme }) => ({
 const BottomImg = styled(Box)(({ theme }) => ({
 
     width:"70%",
+  
+ boxShadow: "rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px",
+    
+    
 
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
@@ -168,7 +185,26 @@ width:"100%",
 
 const ImgOne = styled(Box)(({ theme }) => ({
     // border:"2px solid blue",
-    width:"48%",
+    width:"70%",
+    boxShadow: "rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px",
+    ":hover":{
+      transitionDuration:".5s",
+      transform:"scale(1.2)"
+    },
+borderRadius:30,
+
+  [theme.breakpoints.down("xl")]: {},
+  [theme.breakpoints.down("lg")]: {},
+  [theme.breakpoints.down("md")]: {
+      width:"100%",
+  },
+  [theme.breakpoints.down("sm")]: {},
+  [theme.breakpoints.down("xs")]: {},
+}))
+const ImgWrap = styled(Box)(({ theme }) => ({
+    // border:"2px solid blue",
+    cursor:"grab",
+ 
 
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
@@ -194,6 +230,10 @@ const DiscOne = styled(Typography)(({ theme }) => ({
     textAlign:"left",
     color:"grey",
     // border:"2px solid red",
+    // ":hover":{
+    //   transitionDuration:",5s",
+    //   transform:"scale(1.2)",
+    // },
 
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
@@ -228,12 +268,9 @@ const TextBoxX = styled(Typography)(({ theme }) => ({
 
 
 const ClientDiv = styled(Box)(({ theme }) => ({
-// border:"2px solid blue",
-overflow:"auto",
-maxWidth:"900px",
-display:"flex",
-background:"#f8f8f8",
-height:350,
+
+background:"#fffe",
+
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
   [theme.breakpoints.down("md")]: {},
@@ -243,6 +280,9 @@ height:350,
 
 const ImgCli = styled(Box)(({ theme }) => ({
 // border:"2px solid green",
+width:"100%",
+
+
 
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
@@ -436,9 +476,11 @@ const DivOneBox = styled(Box)(({ theme }) => ({
    padding:25,
    ":hover":{
     transitionDuration:".5s",
-    transform:  'rotate(360deg)' ,
-    padding:20,
+    transform:  'rotate(360deg)', 
+    padding:"20px",
+   
    },
+   borderRadius:30,
   boxShadow:" rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;",
 
 
@@ -453,6 +495,7 @@ const IconImgOne = styled(Box)(({ theme }) => ({
 
   //  border:"2px solid red",
     width:"80%",
+    
    
    
   [theme.breakpoints.down("xl")]: {},
@@ -481,6 +524,14 @@ const ArrowDiv = styled(Box)(({ theme }) => ({
 function WebDev() {
    
      const [count,setCount]=useState(false)
+
+  //    const slideAnimation = keyframe
+  // from {
+  //   transform: translateX(0);
+  // }
+  // to {
+  //   transform: translateX(-100%);
+  // }
 
 
 
@@ -513,24 +564,36 @@ console.log("count",count)
 
     <DetailOne>
 
-    <TitleOne sx={{fontWeight:"700",fontSize:44}}>Revolutionizing Enterprise with Innovative Solutions</TitleOne>
+    <TitleOne sx={{fontWeight:"700",fontSize:44,textShadow:"2px 2px 4px rgba(0, 0, 0, 0.5)"}}>Revolutionizing Enterprise with Innovative Solutions</TitleOne>
 
     <DiscOne>Modernize the organization with innovative software solutions, applications and integrations</DiscOne>
 
     </DetailOne>
 
+<ImgWrap>
     <ImgOne as={"img"} src={gif}/>
+    </ImgWrap>
 
     </BoxOne>
 
-    <TextBox sx={{fontSize:24,color:"#404044",fontWeight:500,}}>Our Clients</TextBox>
+    <TextBox sx={{fontSize:24,color:"#404044",textShadow:"2px 2px 4px rgba(0, 0, 0, 0.5)",fontWeight:500,paddingTop:5,background:"transparent"}}>Our Clients</TextBox>
 
-    <ClientDiv>
-    <ImgCli as={"img"} src={it1}/>
-    <ImgCli as={"img"} src={it2}/>
-    <ImgCli as={"img"} src={it3}/>
+   
+
+    <ClientDiv sx={{paddingBottom:10}}>
+   <Marquee speed={100}>
+    <ImgCli as={"img"} src={scroll1}/>
+    <ImgCli as={"img"} src={scroll2}/>
+    <ImgCli as={"img"} src={scroll3}/>
+    <ImgCli as={"img"} src={scroll5}/>
+    <ImgCli as={"img"} src={scroll6}/>
+
+    </Marquee>
+
 
     </ClientDiv>
+
+     <video style={{width:"100%"}} autoPlay muted loop src={adv}/>
 
     <TitleTwo sx={{fontWeight:"600",fontSize:"34px"}}>
 Future-Ready Solutions: Transforming Your Business With Innovative Software

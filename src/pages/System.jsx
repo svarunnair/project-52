@@ -79,7 +79,8 @@ const MidTit = styled(Typography)(({ theme }) => ({
 const ImgSec = styled(Box)(({ theme }) => ({
     display:"flex", 
     width:"50%",
-
+    boxShadow: "rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;",
+    borderRadius:30,
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
   [theme.breakpoints.down("md")]: {
@@ -136,7 +137,7 @@ width:"100%",
 const IconImage = styled(Box)(({ theme }) => ({
 
    width:"100%",
-
+   boxShadow: "rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px",
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
   [theme.breakpoints.down("md")]: {},
@@ -148,6 +149,13 @@ const Div = styled(Box)(({ theme }) => ({
     display:"flex",
     justifyContent:"center",
     gap:20,
+    cursor:"pointer",
+    ":hover":{
+      transitionDuration:".3s",
+            transform:"scale(1.2)",
+      background:"#33ace2",
+      color:"whitesmoke"
+    },
  
 
   [theme.breakpoints.down("xl")]: {},
@@ -230,7 +238,9 @@ color:"grey",
 }))
 const FirstImg = styled(Box)(({ theme }) => ({
  width:"50%",
+cursor:"wait",
 color:"grey",
+
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
   [theme.breakpoints.down("md")]: {
@@ -268,18 +278,18 @@ function System() {
 </SubDiv>
 
 <Div>
-    <DivOne><TextBox sx={{fontSize:"18"}}>Software Integrations</TextBox></DivOne>
-    <DivOne><TextBox sx={{fontSize:"18"}}>IT System Integrations</TextBox></DivOne>
-    <DivOne><TextBox sx={{fontSize:"18"}}>Enterprise Applications Integrations</TextBox></DivOne>
-    <DivOne><TextBox sx={{fontSize:"18"}}>IT Solutions & Consulting</TextBox></DivOne>
-    <DivOne><TextBox sx={{fontSize:"18"}}>IT Support & Maintenance</TextBox></DivOne>
+    <DivOne><TextBox sx={{fontSize:"18", background:"transparent",}}>Software Integrations</TextBox></DivOne>
+    <DivOne><TextBox sx={{fontSize:"18", background:"transparent",}}>IT System Integrations</TextBox></DivOne>
+    <DivOne><TextBox sx={{fontSize:"18", background:"transparent",}}>Enterprise Applications Integrations</TextBox></DivOne>
+    <DivOne><TextBox sx={{fontSize:"18", background:"transparent",}}>IT Solutions & Consulting</TextBox></DivOne>
+    <DivOne><TextBox sx={{fontSize:"18", background:"transparent",}}>IT Support & Maintenance</TextBox></DivOne>
 </Div>
 
-<SubTit sx={{fontSize:24,color:"#404044",paddingTop:7,paddingBottom:5}}>Effortless Collaboration, Elevate With System Integrations</SubTit>
+<SubTit sx={{fontSize:24,color:"#404044",textShadow:"2px 2px 4px rgba(0, 0, 0, 0.5)",paddingTop:7,paddingBottom:5}}>Effortless Collaboration, Elevate With System Integrations</SubTit>
 
 
 <SecondDiv>
-<ImgSec as={"img"} src={gmeet}/>
+<ImgSec  as={"img"} src={gmeet}/>
 
 <TextSec>
     <TextBox sx={{textAlign:"left",color:"#3c3c3c",fontSize:19}}>Break down silos and enhance collaboration across your organization. Seamlessly connect disparate systems for a more cohesive and streamlined workflow.</TextBox>
@@ -291,7 +301,7 @@ function System() {
 <Scroll/>
 </Arrow>
 
-<MidTit sx={{fontSize:36,color:"#404044",fontWeight:500,paddingTop:7,paddingBottom:2, fontFamily:'sans-serif'}}> Seamless Connectivity, Superior Performance: Explore System Integrations</MidTit>
+<MidTit sx={{fontSize:36,textShadow:"2px 2px 4px rgba(0, 0, 0, 0.5)",color:"#404044",fontWeight:500,paddingTop:7,paddingBottom:2, fontFamily:'sans-serif'}}> Seamless Connectivity, Superior Performance: Explore System Integrations</MidTit>
 
 
 <MidDiv/>

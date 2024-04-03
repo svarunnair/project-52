@@ -13,7 +13,7 @@ function PublicRoutes() {
 
 <Routes>
 
-<Route path='/' element={<Home/>}/>
+<Route path='/' element={<WebDev/>}/>
 <Route path='/home' element={<Home/>}/>
 <Route path='/webdev' element={<WebDev/>}/>
 <Route path='/softdev' element={<SoftDev/>}/>
