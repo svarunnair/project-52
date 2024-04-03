@@ -1,6 +1,9 @@
 import { Box, Typography } from '@mui/material'
 import React from 'react'
 import styled from 'styled-components'
+import ring from '../components/Images/ring.png'
+import analytics from '../components/Images/analytic.png'
+import install from '../components/Images/install.png'
 const BottomWrap = styled(Typography)(({ theme }) => ({
    background:"#1b3d9b",
    padding:40,
@@ -105,19 +108,19 @@ function FooterIcons() {
   <IconBox>
 
 <IconOne>
-    <ImgIcon as={"img"} src='http://www.nigussystems.com/images/queue-statistics.png'/>
+    <ImgIcon as={"img"} src={analytics}/>
     <IconHead>Analytics</IconHead>
     <IconDisc>Elevate performance through cutting-edge IT system analytics, providing deep insights for strategic decision-making and business empowerment.</IconDisc>
 </IconOne>
 
 <IconTwo>
-     <ImgIcon as={"img"} src='http://www.nigussystems.com/images/call-features.png'/>
+     <ImgIcon as={"img"} src={ring}/>
       <IconHead>Application Integrations</IconHead>
        <IconDisc>Elevate performance through cutting-edge IT system analytics, providing deep insights for strategic decision-making and business empowerment.</IconDisc>
 </IconTwo>
 
 <IconThree>
-     <ImgIcon as={"img"} src='http://www.nigussystems.com/images/configure.png'/>
+     <ImgIcon as={"img"} src={install}/>
       <IconHead>Installation & Support</IconHead>
        <IconDisc>Elevate performance through cutting-edge IT system analytics, providing deep insights for strategic decision-making and business empowerment.</IconDisc>
 </IconThree>

@@ -6,6 +6,7 @@ import HeadsetMicOutlinedIcon from '@mui/icons-material/HeadsetMicOutlined';
 import ViewSidebarIcon from '@mui/icons-material/ViewSidebar';
 import { useNavigate } from 'react-router-dom';
 import CloseIcon from '@mui/icons-material/Close';
+import logoN from '../components/Images/logoN.png'
 
 
 
@@ -183,7 +184,7 @@ function Header() {
 
 {slide&&<SideBox>
 <ImgWrap>
-  <IconBox as={"img"} src='http://www.nigussystems.com/images/nigus-logo.png'/>
+  <IconBox as={"img"} src={logoN}/>
   <CloseIcon onClick={handleClose}/>
   </ImgWrap>
    <TextOne sx={{fontWeight:600}} onClick={handleWeb}>Web Development </TextOne>
@@ -210,7 +211,7 @@ function Header() {
     <OuterContainer>
 
     <Wrapper>
-        <IconBox as={"img"} src='http://www.nigussystems.com/images/nigus-logo.png'/>
+        <IconBox as={"img"} src={logoN}/>
         <TextOne sx={{fontWeight:600}}>Services</TextOne>
          <TextOne sx={{fontWeight:600}}>Solutions</TextOne>
           <TextOne sx={{fontWeight:600}}>Industries</TextOne>

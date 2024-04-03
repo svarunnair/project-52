@@ -5,6 +5,8 @@ import MidDiv from '../components/MidDiv'
 import FooterIcons from '../components/FooterIcons'
 import Footer from '../components/Footer'
 import Scroll from '../components/Scroll'
+import menlap from '../components/Images/menlap.gif'
+import gmeet from '../components/Images/gmeet.png'
 
 const Container = styled(Box)(({ theme }) => ({
    padding:50,
@@ -238,7 +240,7 @@ function AiDev() {
 <TextDes >Stay ahead of the curve with integration solutions, future-proofing businesses by connecting and supporting software, systems, and applications with cutting-edge expertise.</TextDes>
         </InnerOne>
 
-<InnerImg as={"img"} src='http://www.nigussystems.com/images/complete-callcenter-solution.gif'/>
+<InnerImg as={"img"} src={menlap}/>
 
         </FirstBox>
 
@@ -250,7 +252,7 @@ function AiDev() {
 
 
 <Wrapper>
-<ImgSec as={"img"} src='http://www.nigussystems.com/images/customer-support-system.png'/>
+<ImgSec as={"img"} src={gmeet}/>
 
 <Detail>
 <SecondDetail sx={{fontSize:"19px",color:"#3c3c3c"}}>

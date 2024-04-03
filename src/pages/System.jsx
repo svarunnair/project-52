@@ -5,6 +5,9 @@ import MidDiv from '../components/MidDiv'
 import FooterIcons from '../components/FooterIcons'
 import Footer from '../components/Footer'
 import Scroll from '../components/Scroll'
+import menlap from '../components/Images/menlap.gif'
+import gmeet from '../components/Images/gmeet.png'
+import animislider from '../components/Images/animialider.gif'
 
 const Container = styled(Box)(({ theme }) => ({
 
@@ -252,12 +255,12 @@ function System() {
 </FirstText>
 
 
-<FirstImg as={"img"} src='http://www.nigussystems.com/images/complete-callcenter-solution.gif'/>
+<FirstImg as={"img"} src={menlap}/>
 
 </FirstDiv>
 
 
-<IconImage as={"img"} src='http://www.nigussystems.com/images/slider.gif'/>
+<IconImage as={"img"} src={animislider}/>
 
 <SubDiv>
     <TextBox sx={{fontWeight:500,fontSize:24,}}>Unifying Software, Systems & Applications</TextBox>
@@ -276,7 +279,7 @@ function System() {
 
 
 <SecondDiv>
-<ImgSec as={"img"} src='http://www.nigussystems.com/images/customer-support-system.png'/>
+<ImgSec as={"img"} src={gmeet}/>
 
 <TextSec>
     <TextBox sx={{textAlign:"left",color:"#3c3c3c",fontSize:19}}>Break down silos and enhance collaboration across your organization. Seamlessly connect disparate systems for a more cohesive and streamlined workflow.</TextBox>

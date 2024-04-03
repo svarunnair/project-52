@@ -1,6 +1,12 @@
 import { Box, Typography } from '@mui/material'
 import React, { useState } from 'react'
 import styled from 'styled-components'
+import money from '../components/Images/money.png'
+import men from '../components/Images/men.png'
+import girl from '../components/Images/girl.png'
+import chat from '../components/Images/chat.png'
+import snap from '../components/Images/snap.png'
+import webt from '../components/Images/webt.png'
 
 
 const Container = styled(Box)(({ theme }) => ({
@@ -115,50 +121,50 @@ function About() {
     <BoxDiv onMouseMove={handleMove}>
 
     {!show&&<BoxOne>
-        <ImgBox as={"img"} src='http://www.nigussystems.com/images/reliablity.png'/>
+        <ImgBox as={"img"} src={money}/>
         <BoxTitle sx={{fontSize:24,}}>Support and Training</BoxTitle>
          <BoxDisc>Benefit from a dedicated support team committed to your success. Our software solutions come with personalized training options and ongoing support, empowering your team to maximize the full potential of our tools.</BoxDisc>
     </BoxOne>}
 
     {!show&&<BoxOne>
-        <ImgBox as={"img"} src='http://www.nigussystems.com/images/client-interaction.png'/>
+        <ImgBox as={"img"} src={girl}/>
         <BoxTitle sx={{fontSize:24,}}>Robust Security Measures</BoxTitle>
          <BoxDisc sx={{fontSize:18}} >Safeguard your valuable data with our robust security features. From encryption to regular updates, our solutions prioritize the highest standards of security, ensuring the confidentiality and integrity of your information.</BoxDisc>
     </BoxOne>}
 
 
     {show&&<BoxOne>
-        <ImgBox as={"img"} src='http://www.nigussystems.com/images/cost-efficency.png'/>
+        <ImgBox as={"img"} src={men}/>
         <BoxTitle sx={{fontSize:24,}}>Cost-Effective Solutions</BoxTitle>
          <BoxDisc>Optimize your budget with our cost-effective software solutions. Enjoy a comprehensive set of features without compromising on quality. Our pricing models are designed to offer value for your investment, helping you achieve a higher return on investment.</BoxDisc>
     </BoxOne>}
 
     {show&&<BoxOne>
-        <ImgBox as={"img"} src='http://www.nigussystems.com/images/service-mobility.png'/>
+        <ImgBox as={"img"} src={chat}/>
         <BoxTitle sx={{fontSize:24,}}>Innovative Technology</BoxTitle>
          <BoxDisc sx={{fontSize:18}} >Embrace cutting-edge technology with our software solutions, ensuring your business stays ahead in an ever-evolving digital landscape. Benefit from features designed to enhance efficiency and adaptability.</BoxDisc>
     </BoxOne>}
 
     <BoxOne>
-        <ImgBox as={"img"} src='http://www.nigussystems.com/images/versatality-features.png'/>
+        <ImgBox as={"img"} src={snap}/>
         <BoxTitle sx={{fontSize:24,}}>Customer-Centric Solutions</BoxTitle>
          <BoxDisc sx={{fontSize:18}}>Experience an intuitive and user-friendly interface tailored to meet the needs of your team. Our software prioritizes a seamless user experience, reducing learning curves and optimizing productivity.</BoxDisc>
     </BoxOne>
 
     <BoxOne>
-        <ImgBox as={"img"} src='http://www.nigussystems.com/images/simple-conference-calls.png'/>
+        <ImgBox as={"img"} src={webt}/>
         <BoxTitle sx={{fontSize:24,}}> Scalability and Flexibility</BoxTitle>
          <BoxDisc sx={{fontSize:18}}>Grow your business without constraints. Our software solutions offer scalability and flexibility, accommodating the evolving demands of your organization. Scale up effortlessly as your requirements change.</BoxDisc>
     </BoxOne>
 
     <BoxOne>
-        <ImgBox as={"img"} src='http://www.nigussystems.com/images/client-interaction.png'/>
+        <ImgBox as={"img"} src={men}/>
         <BoxTitle sx={{fontSize:24,}}>Robust Security Measures</BoxTitle>
          <BoxDisc sx={{fontSize:18}}>Safeguard your valuable data with our robust security features. From encryption to regular updates, our solutions prioritize the highest standards of security, ensuring the confidentiality and integrity of your information.</BoxDisc>
     </BoxOne>
 
     <BoxOne>
-        <ImgBox as={"img"} src='http://www.nigussystems.com/images/reliablity.png'/>
+        <ImgBox as={"img"} src={money}/>
         <BoxTitle sx={{fontSize:24,}}>Support and Training</BoxTitle>
          <BoxDisc sx={{fontSize:18}}>Benefit from a dedicated support team committed to your success. Our software solutions come with personalized training options and ongoing support, empowering your team to maximize the full potential of our tools.</BoxDisc>
     </BoxOne>

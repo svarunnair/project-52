@@ -1,6 +1,8 @@
 import { Box, Typography } from '@mui/material'
 import React from 'react'
 import styled from 'styled-components'
+import logoN from "../components/Images/logoN.png"
+
 
 const FooterDiv = styled(Box)(({ theme }) => ({
     // border:"2px solid green",
@@ -50,7 +52,7 @@ function Footer() {
   return (
   <FooterDiv>
 
-<IconImg as={"img"} src="http://www.nigussystems.com/images/nigus-logo.png"/>
+<IconImg as={"img"} src={logoN}/>
 <IconHead>Nigus Systems Private Limited</IconHead>
 <FooterDisc sx={{fontSize:'12px'}}>We work across 24 x 7 to help you run your business without any hassle
 

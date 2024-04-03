@@ -5,6 +5,12 @@ import Header from '../components/Header'
 import ThumbUpIcon from '@mui/icons-material/ThumbUp';
 import ArrowCircleUpRoundedIcon from '@mui/icons-material/ArrowCircleUpRounded';
 import { useHref, useParams } from 'react-router-dom';
+import logoN from "../components/Images/logoN.png"
+import menlap from '../components/Images/menlap.gif'
+import gmeet from '../components/Images/gmeet.png'
+import ring from '../components/Images/ring.png'
+import install from '../components/Images/install.png'
+import analitics from '../components/Images/analytic.png'
 
 
 
@@ -545,7 +551,7 @@ function Home() {
         </InnerOne>
 
 
-<InnerImg as={"img"} src='http://www.nigussystems.com/images/complete-callcenter-solution.gif'/>
+<InnerImg as={"img"} src={menlap}/>
 
         </FirstBox>
 
@@ -557,7 +563,7 @@ function Home() {
 
 
 <Wrapper>
-<ImgSec as={"img"} src='http://www.nigussystems.com/images/customer-support-system.png'/>
+<ImgSec as={"img"} src={gmeet}/>
 
 <Detail>
 <SecondDetail sx={{fontSize:"19px",color:"#3c3c3c"}}>
@@ -635,19 +641,19 @@ Ignite innovation as our expert integrations connect and enhance your IT softwar
 <IconBox>
 
 <IconOne>
-    <ImgIcon as={"img"} src='http://www.nigussystems.com/images/queue-statistics.png'/>
+    <ImgIcon as={"img"} src={analitics}/>
     <IconHead sx={{fontWeight:600,fontSize:22,paddingTop:1}}>Analytics</IconHead>
     <IconDisc>Elevate performance through cutting-edge IT system analytics, providing deep insights for strategic decision-making and business empowerment.</IconDisc>
 </IconOne>
 
 <IconTwo>
-     <ImgIcon as={"img"} src='http://www.nigussystems.com/images/call-features.png'/>
+     <ImgIcon as={"img"} src={ring}/>
       <IconHead sx={{fontWeight:600,fontSize:22,paddingTop:1}}>Application Integrations</IconHead>
        <IconDisc>Elevate performance through cutting-edge IT system analytics, providing deep insights for strategic decision-making and business empowerment.</IconDisc>
 </IconTwo>
 
 <IconThree>
-     <ImgIcon as={"img"} src='http://www.nigussystems.com/images/configure.png'/>
+     <ImgIcon as={"img"} src={install}/>
       <IconHead sx={{fontWeight:600,fontSize:22,paddingTop:1}}>Installation & Support</IconHead>
        <IconDisc>Elevate performance through cutting-edge IT system analytics, providing deep insights for strategic decision-making and business empowerment.</IconDisc>
 </IconThree>
@@ -666,7 +672,7 @@ Ignite innovation as our expert integrations connect and enhance your IT softwar
 
 <Footer>
 
-<IconImg as={"img"} src="http://www.nigussystems.com/images/nigus-logo.png"/>
+<IconImg as={"img"} src={logoN}/>
 <IconHead>Nigus Systems Private Limited</IconHead>
 <FooterDisc sx={{fontSize:'12px'}}>We work across 24 x 7 to help you run your business without any hassle.
 <FooterDisc sx={{fontSize:'12px'}}>business without any hassle.

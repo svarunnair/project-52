@@ -7,6 +7,18 @@ import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import { Slide } from '@mui/material';
 import Scroll from '../components/Scroll';
 import { Rotate90DegreesCcw } from '@mui/icons-material';
+import aidev from '../components/Images/aidev.png'
+import appli from '../components/Images/appli.png'
+import softdev from '../components/Images/softdev.png'
+import webdev from '../components/Images/webdev.png'
+import system from '../components/Images/system.png'
+import crm from '../components/Images/crm integration.png'
+import ldylap from '../components/Images/business-conferencing.png'
+import intig from '../components/Images/integration-logo.png'
+import slider1 from '../components/Images/slider1.png'
+import slider2 from '../components/Images/slider2.png'
+import gif from '../components/Images/logogiff.gif'
+
 const Container = styled(Box)(({ theme }) => ({
     // border:"2px solid red",
     padding:15,
@@ -467,8 +479,8 @@ function WebDev() {
 
 
 
-   let image_set = [ 'http://www.nigussystems.com/images/slider2.png',
-      'http://www.nigussystems.com/images/slider1.png',
+   let image_set = [ {slider1},
+      {slider2},
      ]
 
 
@@ -502,7 +514,7 @@ console.log("count",count)
 
     </DetailOne>
 
-    <ImgOne as={"img"} src='http://www.nigussystems.com/images/integration-logos.gif'/>
+    <ImgOne as={"img"} src={gif}/>
 
     </BoxOne>
 
@@ -544,25 +556,25 @@ Future-Ready Solutions: Transforming Your Business With Innovative Software
 </ArrowDiv>
     <DivOne>
         <DivOneBox>
-        <IconImgOne as={"img"} src='http://www.nigussystems.com/images/apps.png'/>
+        <IconImgOne as={"img"} src={webdev}/>
         <TextBoxX sx={{fontWeight:600,}}>Web Development</TextBoxX>
 
         </DivOneBox>
         <DivOneBox>
-        <IconImgOne as={"img"} src='http://www.nigussystems.com/images/crm%20integration.png'/>
-        <TextBoxX sx={{fontWeight:600,}}>Web Development</TextBoxX>
+        <IconImgOne as={"img"} src={appli}/>
+        <TextBoxX sx={{fontWeight:600,}}>Application Development</TextBoxX>
 
         </DivOneBox>
 
 
         <DivOneBox >
-    <IconImgOne as={"img"} src='http://www.nigussystems.com/images/unified%20communications.png'/>
+    <IconImgOne as={"img"} src={softdev}/>
     <TextBoxX sx={{fontWeight:600,}}>Software Development</TextBoxX>
 
     </DivOneBox>
 
     <DivOneBox>
- <IconImgOne as={"img"} src='http://www.nigussystems.com/images/application-integration.png'/>
+ <IconImgOne as={"img"} src={aidev}/>
   <TextBoxX sx={{fontWeight:600,}}> AI/ML Development</TextBoxX>
     </DivOneBox>
         
@@ -571,19 +583,19 @@ Future-Ready Solutions: Transforming Your Business With Innovative Software
  <IconSecond>
 
  <DivOneBox>
- <IconImgOne as={"img"} src='http://www.nigussystems.com/images/call-center-solutions.png'/>
+ <IconImgOne as={"img"} src={system}/>
   <TextBoxX sx={{fontWeight:600,}}> System Integration</TextBoxX>
     </DivOneBox>
     
     
 <DivOneBox>
- <IconImgOne as={"img"} src='http://www.nigussystems.com/images/crm%20integration.png'/>
+ <IconImgOne as={"img"} src={crm}/>
   <TextBoxX sx={{fontWeight:600,}}>CRM Integration</TextBoxX>
     </DivOneBox>
 
   
     <DivOneBox>
- <IconImgOne as={"img"} src='http://www.nigussystems.com/images/web-conferencing.png'/>
+ <IconImgOne as={"img"} src={intig}/>
   <TextBoxX sx={{fontWeight:600,}}> Application Integration</TextBoxX>
     </DivOneBox>
 
@@ -618,7 +630,7 @@ Future-Ready Solutions: Transforming Your Business With Innovative Software
 </BottomOne>
 
 <BottomTwo>
-    <BottomImg as={"img"} src='http://www.nigussystems.com/images/business-conferencing.png' />
+    <BottomImg as={"img"} src={ldylap} />
 </BottomTwo>
     </BottomBox>
 

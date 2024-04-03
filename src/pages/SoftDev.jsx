@@ -5,6 +5,8 @@ import MidDiv from '../components/MidDiv'
 import FooterIcons from '../components/FooterIcons'
 import Footer from '../components/Footer'
 import Scroll from '../components/Scroll'
+import menlap from '../components/Images/menlap.gif'
+import gmeet from '../components/Images/gmeet.png'
 
 const Container = styled(Box)(({ theme }) => ({
 
@@ -234,7 +236,7 @@ function SoftDev() {
 </FirstText>
 
 
-<FirstImg as={"img"} src='http://www.nigussystems.com/images/complete-callcenter-solution.gif'/>
+<FirstImg as={"img"} src={menlap}/>
 
 </FirstDiv>
 
@@ -257,7 +259,7 @@ function SoftDev() {
 <Scroll/>
 </ArrowDiv>
 <SecondDiv>
-<ImgSec as={"img"} src='http://www.nigussystems.com/images/customer-support-system.png'/>
+<ImgSec as={"img"} src={gmeet}/>
 
 <TextSec>
     <TextBox sx={{textAlign:"left",color:"#3c3c3c",fontSize:19}}>Break down silos and enhance collaboration across your organization. Seamlessly connect disparate systems for a more cohesive and streamlined workflow.</TextBox>
