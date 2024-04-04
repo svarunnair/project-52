@@ -57,7 +57,8 @@ const SubTit = styled(Typography)(({ theme }) => ({
   [theme.breakpoints.down("xs")]: {},
 }))
 const SecondDiv = styled(Box)(({ theme }) => ({
-    display:"flex", 
+    display:"flex",
+    justifyContent:"center", 
 
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
@@ -78,7 +79,7 @@ const MidTit = styled(Typography)(({ theme }) => ({
 }))
 const ImgSec = styled(Box)(({ theme }) => ({
     display:"flex", 
-    width:"50%",
+    width:"100%",
     boxShadow: "rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;",
     borderRadius:30,
   [theme.breakpoints.down("xl")]: {},
@@ -237,9 +238,48 @@ color:"grey",
   [theme.breakpoints.down("xs")]: {},
 }))
 const FirstImg = styled(Box)(({ theme }) => ({
+ width:"90%",
+cursor:"wait",
+color:"grey",
+borderRadius:30,
+
+  [theme.breakpoints.down("xl")]: {},
+  [theme.breakpoints.down("lg")]: {},
+  [theme.breakpoints.down("md")]: {
+     width:"100%",
+  },
+  [theme.breakpoints.down("sm")]: {},
+  [theme.breakpoints.down("xs")]: {},
+}))
+const ImgWrap = styled(Box)(({ theme }) => ({
  width:"50%",
 cursor:"wait",
 color:"grey",
+":hover":{
+      transitionDuration:".5s",
+      transform:"scale(1.1)",
+      marginBottom:20,
+      boxShadow: "rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;"
+    },
+
+  [theme.breakpoints.down("xl")]: {},
+  [theme.breakpoints.down("lg")]: {},
+  [theme.breakpoints.down("md")]: {
+     width:"100%",
+  },
+  [theme.breakpoints.down("sm")]: {},
+  [theme.breakpoints.down("xs")]: {},
+}))
+const WrapI = styled(Box)(({ theme }) => ({
+ width:"50%",
+color:"grey",
+
+padding:10,
+cursor:"grab",
+":hover":{
+  transitionDuration:".5s",
+  transform:"scale(1.1)"
+},
 
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
@@ -257,15 +297,18 @@ function System() {
 <FirstDiv>
 
 <FirstText>
-    <Header sx={{fontWeight:"500",fontSize: 48}}>Breaking Boundaries</Header>
+    <Header sx={{cursor:"grab",fontWeight:"500",fontSize: 48,":hover":{textShadow:"2px 2px 4px rgba(0, 0, 0, 0.5)",transitionDuration:".5s",textShadow:"2px 2px 4px rgba(0, 0, 0, 0.5)",paddingLeft:15,color:"#1b3d9b"}}}>Breaking Boundaries</Header>
     <Disc>Break free from limitations with integration expertise, unifying software, systems, and applications for a streamlined and cohesive business experience.</Disc>
 <Disc sx={{paddingTop:2,}}>Stay ahead of the curve with integration solutions, future-proofing businesses by connecting and supporting software, systems, and applications with cutting-edge expertise.</Disc>
 
 
 </FirstText>
 
+<ImgWrap>
 
 <FirstImg as={"img"} src={menlap}/>
+
+</ImgWrap>
 
 </FirstDiv>
 
@@ -273,7 +316,7 @@ function System() {
 <IconImage as={"img"} src={animislider}/>
 
 <SubDiv>
-    <TextBox sx={{fontWeight:500,fontSize:24,}}>Unifying Software, Systems & Applications</TextBox>
+    <TextBox sx={{fontWeight:500,fontSize:24,textShadow:"2px 2px 4px rgba(0, 0, 0, 0.5)",":hover":{color:"#1b3d9b",transitionDuration:".5s",transform:"scale(1.1)",textShadow:"2px 2px 4px rgba(0, 0, 0, 0.5)"},cursor:"grab"}}>Unifying Software, Systems & Applications</TextBox>
     <TextBoxOne sx={{fontSize:18,color:"#3c3c3c",}}>Decade of experience in integration with comprehensive services, seamlessly connecting software, systems, and applications for superior business outcomes.</TextBoxOne>
 </SubDiv>
 
@@ -285,11 +328,13 @@ function System() {
     <DivOne><TextBox sx={{fontSize:"18", background:"transparent",}}>IT Support & Maintenance</TextBox></DivOne>
 </Div>
 
-<SubTit sx={{fontSize:24,color:"#404044",textShadow:"2px 2px 4px rgba(0, 0, 0, 0.5)",paddingTop:7,paddingBottom:5}}>Effortless Collaboration, Elevate With System Integrations</SubTit>
+<SubTit sx={{fontSize:24,color:"#404044",textShadow:"2px 2px 4px rgba(0, 0, 0, 0.5)",paddingTop:7,paddingBottom:5,":hover":{color:"#1b3d9b",transitionDuration:".5s",transform:"scale(1.1)",textShadow:"2px 2px 4px rgba(0, 0, 0, 0.5)"},cursor:"grab"}}>Effortless Collaboration, Elevate With System Integrations</SubTit>
 
 
 <SecondDiv>
+<WrapI>
 <ImgSec  as={"img"} src={gmeet}/>
+</WrapI>
 
 <TextSec>
     <TextBox sx={{textAlign:"left",color:"#3c3c3c",fontSize:19}}>Break down silos and enhance collaboration across your organization. Seamlessly connect disparate systems for a more cohesive and streamlined workflow.</TextBox>
@@ -301,7 +346,7 @@ function System() {
 <Scroll/>
 </Arrow>
 
-<MidTit sx={{fontSize:36,textShadow:"2px 2px 4px rgba(0, 0, 0, 0.5)",color:"#404044",fontWeight:500,paddingTop:7,paddingBottom:2, fontFamily:'sans-serif'}}> Seamless Connectivity, Superior Performance: Explore System Integrations</MidTit>
+<MidTit sx={{fontSize:36,textShadow:"2px 2px 4px rgba(0, 0, 0, 0.5)",color:"#404044",fontWeight:500,paddingTop:7,paddingBottom:2, fontFamily:'sans-serif',":hover":{color:"#1b3d9b",transitionDuration:".5s",transform:"scale(1.1)",textShadow:"2px 2px 4px rgba(0, 0, 0, 0.5)"},cursor:"grab"}}> Seamless Connectivity, Superior Performance: Explore System Integrations</MidTit>
 
 
 <MidDiv/>

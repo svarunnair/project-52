@@ -130,12 +130,32 @@ const InnerOne = styled(Box)(({ theme }) => ({
 
 const InnerImg = styled(Box)(({ theme }) => ({
     display:"flex",
-// border:"2px solid red",
 boxShadow: "rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px",
 borderRadius:30,
-    width:"50%",
+    width:"90%",
     height:"80%",
+    ":hover":{
+      transitionDuration:".5s",
+      transform:"scale(1.1)",
+    },
   
+
+  [theme.breakpoints.down("xl")]: {},
+  [theme.breakpoints.down("lg")]: {},
+  [theme.breakpoints.down("md")]: {
+      width:"100%",
+  },
+  [theme.breakpoints.down("sm")]: {},
+  [theme.breakpoints.down("xs")]: {},
+}))
+const WrapImg = styled(Box)(({ theme }) => ({
+    display:"flex",
+    justifyContent:"center",
+    ":hover":{
+      transitionDuration:".5s",
+      transform:"scale(1.1)",
+    },
+  cursor:"grab",
 
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
@@ -150,6 +170,7 @@ const TextInner = styled(Typography)(({ theme }) => ({
     fontSize:"50px",
     textAlign:"left",
     width:"90%",
+    cursor:"grab",
 
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
@@ -175,6 +196,9 @@ const TextDes = styled(Typography)(({ theme }) => ({
 
 const Wrapper = styled(Box)(({ theme }) => ({
    display:"flex",
+
+   justifyContent:"space-between",
+   alignItems:"center",
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
   [theme.breakpoints.down("md")]: {
@@ -198,7 +222,7 @@ const Detail = styled(Box)(({ theme }) => ({
 }))
 
 const ImgSec = styled(Box)(({ theme }) => ({
-  width:"50%",
+  width:"100%",
   boxShadow: "rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px",
   borderRadius:30,
    
@@ -321,7 +345,7 @@ const FooterHead = styled(Typography)(({ theme }) => ({
 
 const IconBox = styled(Box)(({ theme }) => ({
    display:"flex",
-
+cursor:"grab",
    justifyContent:"center",
    gap:50,
   [theme.breakpoints.down("xl")]: {},
@@ -381,7 +405,23 @@ const IconDisc = styled(Typography)(({ theme }) => ({
 const ImgIcon = styled(Box)(({ theme }) => ({
    display:"flex",
    flexDirection:"column",
+   width:"100%",
+ 
+  [theme.breakpoints.down("xl")]: {},
+  [theme.breakpoints.down("lg")]: {},
+  [theme.breakpoints.down("md")]: {},
+  [theme.breakpoints.down("sm")]: {},
+  [theme.breakpoints.down("xs")]: {},
+}))
+const Wrap = styled(Box)(({ theme }) => ({
+   display:"flex",
+   flexDirection:"column",
+   
    width:"50%",
+   ":hover":{
+    transitionDuration:".5s",
+    transform:"rotateY(360deg)"
+   },
  
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
@@ -559,25 +599,28 @@ function Home() {
     <Container>
         <FirstBox>
         <InnerOne>
-        <TextInner sx={{fontSize:44,fontWeight:"600"}}>Empowering Innovation through Customized Applications  </TextInner>
+        <TextInner sx={{fontSize:44,fontWeight:"500",":hover":{color:"#1b3d9b",transitionDuration:".5s",transform:"scale(1.1)",textShadow:"2px 2px 4px rgba(0, 0, 0, 0.5)",paddingLeft:10}}}>Empowering Innovation through Customized Applications  </TextInner>
         <TextDes>We specialize in crafting cutting-edge applications that redefine user experiences and drive business success.Our team of experienced developers utilizes the latest technologies to create scalable and robust applications tailored to meet your unique needs.</TextDes>
 <TextDes >From concept to deployment, we are dedicated to delivering top-notch solutions that elevate your digital presence and exceed your expectations.</TextDes>
         </InnerOne>
 
-
+<WrapImg>
 <InnerImg as={"img"} src={menlap}/>
+</WrapImg>
 
         </FirstBox>
 
 
 <SecondBox>
 
-<Heading sx={{fontSize:"24px",fontWeight:500,paddingTop:7,paddingBottom:3}}>Effortless Collaboration, Elevate With System Integrations
+<Heading sx={{cursor:"grab",fontSize:"24px",fontWeight:500,paddingTop:7,paddingBottom:3,":hover":{transitionDuration:".5s",transform:"scale(1.1)",textShadow:"2px 2px 4px rgba(0, 0, 0, 0.5)"}}}>Effortless Collaboration, Elevate With System Integrations
 </Heading>
 
 
 <Wrapper>
+<WrapImg>
 <ImgSec as={"img"} src={gmeet}/>
+</WrapImg>
 
 <Detail>
 <SecondDetail sx={{fontSize:"19px",color:"#3c3c3c"}}>
@@ -598,7 +641,7 @@ Break down silos and enhance collaboration across your organization. Seamlessly 
 {backToTop&&<ArrowCircleUpRoundedIcon onClick={scrollUp} sx={{color:"blue",}}/>}
 </ArrowDiv>
 
-<SubDiv sx={{fontWeight:"600",fontSize:40}}>
+<SubDiv sx={{cursor:"grab",fontWeight:"600",fontSize:40,":hover":{transitionDuration:".5s",transform:"scale(1.1)",textShadow:"2px 2px 4px rgba(0, 0, 0, 0.5)"}}}>
     Seamless Connectivity, Superior Performance: Explore System Integrations
 </SubDiv>
 
@@ -628,7 +671,7 @@ Break down silos and enhance collaboration across your organization. Seamlessly 
 <BoxFour>
 
 <FourBoxOne>
-    <HeadFour sx={{fontWeight:500,fontSize:18,padding:1,color:"#404044"}}>
+    <HeadFour sx={{fontWeight:600,fontSize:18,padding:1,color:"#404044"}}>
 Streamlined Excellence - Elevate IT Operations with Seamless Software Integrations
     </HeadFour>
 
@@ -639,7 +682,7 @@ Streamlined Excellence - Elevate IT Operations with Seamless Software Integratio
 
 <FourBoxTwo>
 
-     <HeadFour sx={{fontWeight:500,fontSize:18,padding:1,color:"#404044"}}>
+     <HeadFour sx={{fontWeight:600,fontSize:18,padding:1,color:"#404044"}}>
 Innovative Fusion - Revolutionize IT with Advanced Software Integrations
     </HeadFour>
 
@@ -655,19 +698,25 @@ Ignite innovation as our expert integrations connect and enhance your IT softwar
 <IconBox>
 
 <IconOne>
+<Wrap>
     <ImgIcon as={"img"} src={analitics}/>
+    </Wrap>
     <IconHead sx={{fontWeight:600,fontSize:22,paddingTop:1}}>Analytics</IconHead>
     <IconDisc>Elevate performance through cutting-edge IT system analytics, providing deep insights for strategic decision-making and business empowerment.</IconDisc>
 </IconOne>
 
 <IconTwo>
+<Wrap>
      <ImgIcon as={"img"} src={ring}/>
+     </Wrap>
       <IconHead sx={{fontWeight:600,fontSize:22,paddingTop:1}}>Application Integrations</IconHead>
        <IconDisc>Elevate performance through cutting-edge IT system analytics, providing deep insights for strategic decision-making and business empowerment.</IconDisc>
 </IconTwo>
 
 <IconThree>
+<Wrap>
      <ImgIcon as={"img"} src={install}/>
+     </Wrap>
       <IconHead sx={{fontWeight:600,fontSize:22,paddingTop:1}}>Installation & Support</IconHead>
        <IconDisc>Elevate performance through cutting-edge IT system analytics, providing deep insights for strategic decision-making and business empowerment.</IconDisc>
 </IconThree>

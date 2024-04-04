@@ -71,17 +71,15 @@ color:"grey",
   [theme.breakpoints.down("xs")]: {},
 }))
 
-const BottonBox = styled(Button)(({ theme }) => ({
+const BottonBox = styled(Box)(({ theme }) => ({
 
     display:"flex",
-    color:"#33ace2",
-    ":hover":{
-      color:"black",
-      background:"whitesmoke"
-    },
+    color:"white",
+    // background:"#33ace2",
+    padding:"5px",
     borderRadius:35,
-    boxShadow: "rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px",
-
+    background: 'linear-gradient(to right, #33ace2, blue)',
+    boxShadow: "rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px",
     // color:"white",
       cursor:"pointer",
   [theme.breakpoints.down("xl")]: {},

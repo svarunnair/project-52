@@ -29,6 +29,7 @@ const IconBox = styled(Box)(({ theme }) => ({
    display:"flex",
    justifyContent:"center",
    gap:50,
+   cursor:"grab",
  
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
@@ -43,10 +44,7 @@ const IconOne = styled(Box)(({ theme }) => ({
    flexDirection:"column",
    justifyContent:"center",
       alignItems:"center",
-      ":hover":{
-        transitionDuration:'.5s',
-        
-      },
+      
    
     
   [theme.breakpoints.down("xl")]: {},
@@ -71,7 +69,7 @@ const IconThree = styled(Box)(({ theme }) => ({
 const ImgIcon = styled(Box)(({ theme }) => ({
    display:"flex",
    flexDirection:"column",
-   width:"50%",
+   width:"100%",
     
   
   [theme.breakpoints.down("xl")]: {},
@@ -80,6 +78,24 @@ const ImgIcon = styled(Box)(({ theme }) => ({
   [theme.breakpoints.down("sm")]: {},
   [theme.breakpoints.down("xs")]: {},
 }))
+const Wrap = styled(Box)(({ theme }) => ({
+   display:"flex",
+   flexDirection:"column",
+   width:"50%",
+   ":hover":{
+        transitionDuration:'.5s',
+        transform:"rotateY(360deg)" ,
+      },
+      
+    
+  
+  [theme.breakpoints.down("xl")]: {},
+  [theme.breakpoints.down("lg")]: {},
+  [theme.breakpoints.down("md")]: {},
+  [theme.breakpoints.down("sm")]: {},
+  [theme.breakpoints.down("xs")]: {},
+}))
+
 const IconHead = styled(Typography)(({ theme }) => ({
  
   [theme.breakpoints.down("xl")]: {},
@@ -115,19 +131,25 @@ function FooterIcons() {
   <IconBox>
 
 <IconOne>
+<Wrap>
     <ImgIcon as={"img"} src={analytics}/>
+ </Wrap>
     <IconHead>Analytics</IconHead>
     <IconDisc>Elevate performance through cutting-edge IT system analytics, providing deep insights for strategic decision-making and business empowerment.</IconDisc>
 </IconOne>
 
 <IconTwo>
+<Wrap>
      <ImgIcon as={"img"} src={ring}/>
+     </Wrap>
       <IconHead>Application Integrations</IconHead>
        <IconDisc>Elevate performance through cutting-edge IT system analytics, providing deep insights for strategic decision-making and business empowerment.</IconDisc>
 </IconTwo>
 
 <IconThree>
+<Wrap>
      <ImgIcon as={"img"} src={install}/>
+     </Wrap>
       <IconHead>Installation & Support</IconHead>
        <IconDisc>Elevate performance through cutting-edge IT system analytics, providing deep insights for strategic decision-making and business empowerment.</IconDisc>
 </IconThree>
@@ -138,7 +160,7 @@ function FooterIcons() {
 </IconBox>
 
 <BottomWrap>
-<BottomText sx={{fontSize:"33px",fontWeight:'600'}}>
+<BottomText sx={{fontSize:"33px",fontWeight:'600',}}>
     Decade-plus of experience in India, the Middle East, and the Asia Pacific, delivering enterprise software and application solutions tailored to meet diverse business needs.
 </BottomText>
 </BottomWrap>

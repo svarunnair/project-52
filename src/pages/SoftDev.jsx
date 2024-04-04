@@ -221,8 +221,29 @@ color:"grey",
   [theme.breakpoints.down("xs")]: {},
 }))
 const FirstImg = styled(Box)(({ theme }) => ({
+ width:"100%",
+color:"grey",
+borderRadius:30,
+
+boxShadow: "rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;",
+  [theme.breakpoints.down("xl")]: {},
+  [theme.breakpoints.down("lg")]: {},
+  [theme.breakpoints.down("md")]: {
+     width:"100%",
+  },
+  [theme.breakpoints.down("sm")]: {},
+  [theme.breakpoints.down("xs")]: {},
+}))
+const WrapI = styled(Box)(({ theme }) => ({
  width:"50%",
 color:"grey",
+padding:10,
+cursor:"grab",
+":hover":{
+  transitionDuration:".5s",
+  transform:"scale(1.1)"
+},
+
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
   [theme.breakpoints.down("md")]: {
@@ -239,19 +260,20 @@ function SoftDev() {
 <FirstDiv>
 
 <FirstText>
-    <Header sx={{fontWeight:"500",fontSize: 48}}>Software Excellence, Elevating Businesses to new heights</Header>
+    <Header sx={{fontWeight:"500",fontSize: 48,cursor:"grab",":hover":{color:"#1b3d9b",transitionDuration:".5s",transform:"scale(1.1)",textShadow:"2px 2px 4px rgba(0, 0, 0, 0.5)",paddingLeft:7}}}>Software Excellence, Elevating Businesses to new heights</Header>
     <Disc>Seamlessly connect software, systems, and applications for optimized performance, propelling businesses to unparalleled success.</Disc>
 <Disc sx={{paddingTop:2,}}>Experience the transformative power of unified operations, ensuring peak productivity and unlocking new possibilities with cutting-edge integration expertise.</Disc>
 </FirstText>
 
-
+<WrapI>
 <FirstImg as={"img"} src={menlap}/>
+</WrapI>
 
 </FirstDiv>
 
 
 <SubDiv>
-    <TextBox sx={{fontWeight:500,fontSize:24,}}>Innovate. Build. Thrive</TextBox>
+    <TextBox sx={{fontWeight:500,fontSize:24,cursor:"grab",textShadow:"2px 2px 4px rgba(0, 0, 0, 0.5)",":hover":{transitionDuration:".5s",transform:"scale(1.2)",color:"#1b3d9b"}}}>Innovate. Build. Thrive</TextBox>
     <TextBox sx={{width:"65%",fontSize:18,color:"#3c3c3c",padding:1,}}>Decade of experience in integration with comprehensive services, seamlessly connecting software, systems, and applications for superior business outcomes.</TextBox>
 </SubDiv>
 
@@ -263,7 +285,7 @@ function SoftDev() {
     <DivOne><TextBox sx={{fontSize:"18"}}>Support & Maintenance</TextBox></DivOne>
 </Div>
 
-<SubTit sx={{fontSize:24,color:"#404044",paddingTop:7,paddingBottom:5}}>Effortless Collaboration, Elevate With System Integrations</SubTit>
+<SubTit sx={{fontSize:24,color:"#404044",paddingTop:7,paddingBottom:5,textShadow:"2px 2px 4px rgba(0, 0, 0, 0.5)",":hover":{transitionDuration:".5s",transform:"scale(1.2)",color:"#1b3d9b"},cursor:"grab"}}>Effortless Collaboration, Elevate With System Integrations</SubTit>
 <ArrowDiv>
 <Scroll/>
 </ArrowDiv>
@@ -277,7 +299,7 @@ function SoftDev() {
 
 </SecondDiv>
 
-<MidTit sx={{fontSize:36,color:"#404044",fontWeight:500,paddingTop:7,paddingBottom:2, fontFamily:'sans-serif'}}> Seamless Connectivity, Superior Performance: Explore System Integrations</MidTit>
+<MidTit sx={{fontSize:36,color:"#404044",fontWeight:500,paddingTop:7,paddingBottom:2,":hover":{transitionDuration:".5s",transform:"scale(1.1)",color:"#1b3d9b"},cursor:"grab", fontFamily:'sans-serif'}}> Seamless Connectivity, Superior Performance: Explore System Integrations</MidTit>
 
 <MidDiv/>
 

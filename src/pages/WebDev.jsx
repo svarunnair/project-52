@@ -48,9 +48,11 @@ const Container = styled(Box)(({ theme }) => ({
 }))
 
 const BoxOne = styled(Box)(({ theme }) => ({
-    // border:"2px solid yellow",
+    // border:"2px solid red",
     display:"flex",
     justifyContent:"center",
+    alignItems:"center",
+    
 
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
@@ -138,6 +140,7 @@ cursor:"grab",
 const BottomImg = styled(Box)(({ theme }) => ({
 
     width:"70%",
+    borderRadius:30,
   
  boxShadow: "rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px",
     
@@ -169,11 +172,13 @@ const BottomList = styled(Typography)(({ theme }) => ({
 }))
 
 const DetailOne = styled(Box)(({ theme }) => ({
-    // border:"2px solid red",
+    // border:"2px solid green",
     width:"40%",
     display:"flex",
     flexDirection:"column",
-    justifyContent:"flex-start",
+    alignItems:"center",
+    justifyContent:"center",
+
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
   [theme.breakpoints.down("md")]: {
@@ -204,6 +209,12 @@ borderRadius:30,
 const ImgWrap = styled(Box)(({ theme }) => ({
     // border:"2px solid blue",
     cursor:"grab",
+    display:"flex",
+    justifyContent:"center",
+   ":hover":{
+    transitionDuration:".5s",
+    transform:"scale(1.1)"
+   },
  
 
   [theme.breakpoints.down("xl")]: {},
@@ -216,6 +227,9 @@ const ImgWrap = styled(Box)(({ theme }) => ({
 }))
 const TitleOne = styled(Typography)(({ theme }) => ({
     textAlign:"left",
+    width:"80%",
+    cursor:"grab",
+    // border:"2px solid red",
 
 
   [theme.breakpoints.down("xl")]: {},
@@ -229,6 +243,7 @@ const TitleOne = styled(Typography)(({ theme }) => ({
 const DiscOne = styled(Typography)(({ theme }) => ({
     textAlign:"left",
     color:"grey",
+    width:"80%",
     // border:"2px solid red",
     // ":hover":{
     //   transitionDuration:",5s",
@@ -312,6 +327,7 @@ const TitleTwo = styled(Typography)(({ theme }) => ({
     // border:"5px solid green",
     width:"80%",
     justifyContent:"center",
+   
 
   [theme.breakpoints.down("xl")]: {},
   [theme.breakpoints.down("lg")]: {},
@@ -564,7 +580,9 @@ console.log("count",count)
 
     <DetailOne>
 
-    <TitleOne sx={{fontWeight:"700",fontSize:44,textShadow:"2px 2px 4px rgba(0, 0, 0, 0.5)"}}>Revolutionizing Enterprise with Innovative Solutions</TitleOne>
+    <TitleOne sx={{fontWeight:"500",fontSize:44,textShadow:"2px 2px 4px rgba(0, 0, 0, 0.5)",":hover":{color:"#1b3d9b",transform:"scale(1.1)",transitionDuration:".5s",
+      textShadow:"2px 2px 4px rgba(0, 0, 0, 0.5)",paddingLeft:15,
+    }}}>Revolutionizing Enterprise with Innovative Solutions</TitleOne>
 
     <DiscOne>Modernize the organization with innovative software solutions, applications and integrations</DiscOne>
 
@@ -595,7 +613,9 @@ console.log("count",count)
 
      <video style={{width:"100%"}} autoPlay muted loop src={adv}/>
 
-    <TitleTwo sx={{fontWeight:"600",fontSize:"34px"}}>
+    <TitleTwo sx={{fontWeight:"600",fontSize:"34px", ":hover":{transform:"scale(1.1)",transitionDuration:".5s",
+      textShadow:"2px 2px 4px rgba(0, 0, 0, 0.5)",
+    },}}>
 Future-Ready Solutions: Transforming Your Business With Innovative Software
     </TitleTwo>
 
